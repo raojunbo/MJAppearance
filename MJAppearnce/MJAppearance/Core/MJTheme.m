@@ -20,6 +20,13 @@
     return instance;
 }
 
+- (BOOL)darkMode {
+    if ([self.currentTheme.themeIdentifier isEqualToString:@"1"]) {
+     return YES;
+    }else{
+        return NO;;
+    }
+}
 - (BOOL)switchToLight {
     BOOL sucess = [self switchToTheme:@"0"];
     if (sucess) {

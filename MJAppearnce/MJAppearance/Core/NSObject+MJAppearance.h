@@ -18,8 +18,6 @@ typedef void(^MJBlockPicker)(void);
 @property (nonatomic, strong) NSMutableDictionary<NSString *, id> *appearanceWorks;//用于存储信息(图片，或者颜色)
 @property (class, nonatomic, strong,readonly) NSHashTable *objectWeakHashTable;//全局hashTable用于存需要更新的View的weak指针。
 
-- (void)mj_addObjectToWeakHashTable:(id)object;
-
 - (void)mj_updateAppearanceColor;
 
 @end

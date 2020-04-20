@@ -15,7 +15,7 @@ static NSString *KAppThemeChangeNotifcation = @"KAppThemeChangeNotifcation";
 @interface MJTheme : NSObject
 
 @property (nonatomic,strong) MJThemeData *currentTheme;
-
+@property (nonatomic,assign,readonly) BOOL darkMode;
 + (instancetype)sharedInstance;
 
 - (BOOL)switchToLight;

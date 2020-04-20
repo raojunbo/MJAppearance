@@ -13,9 +13,10 @@
 #import "UIColor+MJAppearance.h"
 #import "MJAppearanceColor.h"
 #import "MJAppearanceImage.h"
+#import "MJTheme.h"
 
 @interface UIImageView()
-
+@property (nonatomic, strong) CALayer *darkLayer;
 @end
 
 @implementation UIImageView (MJAppearance)
@@ -56,12 +57,42 @@
     return self.image;
 }
 
-- (void)setMj_supportDark:(BOOL)mj_supportDark {
-    objc_setAssociatedObject(self,@selector(setMj_supportDark:), @(mj_supportDark), OBJC_ASSOCIATION_ASSIGN);
+- (void)setMj_netImageSupportDark:(BOOL)mj_netImageSupportDark {
+    objc_setAssociatedObject(self,@selector(setMj_netImageSupportDark:), @(mj_netImageSupportDark), OBJC_ASSOCIATION_ASSIGN);
+    MJBlockPicker colorPicker = ^(){
+        if (mj_netImageSupportDark) {
+            if([MJTheme sharedInstance].darkMode){
+                [self.layer addSublayer:self.darkLayer];
+            }else{
+                [self.darkLayer removeFromSuperlayer];
+            }
+        }else{
+            [self.darkLayer removeFromSuperlayer];
+        }
+    };
+    [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
 
-- (BOOL)mj_supportDark {
-    return objc_getAssociatedObject(self, @selector(setMj_supportDark:));
+- (BOOL)mj_netImageSupportDark {
+      return objc_getAssociatedObject(self, @selector(setMj_netImageSupportDark:));
+}
+
+- (CALayer *)darkLayer {
+    CALayer *tempDarkLayer =  objc_getAssociatedObject(self, @selector(setDarkLayer:));
+    if (!tempDarkLayer) {
+        tempDarkLayer = [CALayer layer];
+        tempDarkLayer.bounds = self.bounds;
+        tempDarkLayer.anchorPoint = CGPointMake(0, 0);
+        tempDarkLayer.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1].CGColor;// [UIColor redColor].CGColor;
+        [self setDarkLayer:tempDarkLayer];
+    }
+    return tempDarkLayer;
+}
+
+- (void)setDarkLayer:(CALayer *)darkLayer {
+    if (darkLayer!=nil) {
+        objc_setAssociatedObject(self,@selector(setDarkLayer:),darkLayer, OBJC_ASSOCIATION_RETAIN);
+    }
 }
 
 @end

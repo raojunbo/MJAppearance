@@ -109,13 +109,11 @@
     
     //文件读取
     self.imageView4 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50 )];
-    self.imageView4.mj_backgroundColor = MJAppearanceColor.page;
     
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *resourcePath = [bundle resourcePath];
     NSString *filePath = [resourcePath stringByAppendingPathComponent:@"cry"];
     self.imageView4.mj_image =  [MJAppearanceImage mj_imageWithContentsOfFile:filePath];
-//    self.imageView6.image =
     [self.view addSubview:self.imageView4];
     self.imageView4.top = self.imageView2.top;
     self.imageView4.left = self.imageView3.right + 10;
@@ -130,11 +128,14 @@
     
     //网络图片
     self.imageView6 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+    self.imageView6.layer.masksToBounds = YES;
+    self.imageView6.layer.cornerRadius = 20;
+    [self.imageView6 sd_setImageWithURL:[NSURL URLWithString:@"https://www.google.com/logos/doodles/2020/thank-you-teachers-and-childcare-workers-6753651837108762.3-law.gif"]];
+    self.imageView6.mj_backgroundColor = MJAppearanceColor.Mojiblue;
     [self.view addSubview:self.imageView6];
     self.imageView6.top = self.imageView2.top;
     self.imageView6.left = self.imageView5.right + 10;
-        
-    
+    self.imageView6.mj_netImageSupportDark = YES;
     
 }
 

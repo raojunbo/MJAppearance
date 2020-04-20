@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIColor *mj_tintColor;
 @property (nonatomic, strong) UIImage *mj_image;
-@property (nonatomic, assign) BOOL mj_supportDark;//本控件支持黑暗（在黑暗主题下，会加10%蒙层）
+@property (nonatomic, assign) BOOL mj_netImageSupportDark;//本控件支持黑暗（在黑暗主题下，会加10%蒙层）
 
 @end
 
