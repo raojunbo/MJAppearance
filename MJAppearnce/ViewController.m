@@ -28,6 +28,8 @@
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UIButton *button2;
+@property (nonatomic, strong) UIButton *button3;
 
 @property (nonatomic, strong) UIImageView *imageView2;
 @property (nonatomic, strong) UIImageView *imageView3;
@@ -38,11 +40,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.switchView = [[UISwitch alloc]initWithFrame:CGRectMake(0, 100, 50, 50)];
     [self.switchView addTarget:self action:@selector(switchTheme) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.switchView];
-
+    
     [self testBindColorToView];
     [self testBindImage];
 }
@@ -52,13 +54,13 @@
     self.normaleView = [[UIView alloc]initWithFrame:CGRectMake(0, 150, 200, 50)];
     self.normaleView.mj_backgroundColor = MJAppearanceColor.Mojiblue;;
     [self.view addSubview:self.normaleView];
-
+    
     //image
     self.imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 200, 50 )];
     self.imageView.mj_backgroundColor = MJAppearanceColor.page;
     [self.view addSubview:self.imageView];
     self.imageView.top = self.normaleView.bottom;
-
+    
     //label
     self.label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
     self.label.text = @"我是文本";
@@ -66,15 +68,32 @@
     self.label.mj_backgroundColor = MJAppearanceColor.page;
     [self.view addSubview:self.label];
     self.label.top = self.imageView.bottom;
-
+    
     //button
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.button.frame = CGRectMake(0, 0, 200, 50);
+    self.button.frame = CGRectMake(0, 0, 50, 50);
     [self.button setTitle:@"我是button" forState:UIControlStateNormal];
     [self.button mj_setTitleColor:MJAppearanceColor.Mojiblue forState:UIControlStateNormal];
     self.button.mj_backgroundColor = MJAppearanceColor.page;
     [self.view addSubview:self.button];
     self.button.top = self.label.bottom;
+    
+    self.button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.button2.frame = CGRectMake(0, 0, 50, 50);
+    [self.button2 setTitle:@"我是button" forState:UIControlStateNormal];
+    [self.button2 mj_setImage:[MJAppearanceImage mj_imageWithName:@"smile"] forState:UIControlStateNormal];
+    [self.view addSubview:self.button2];
+    self.button2.top = self.button.top;
+    self.button2.left = self.button.right + 10;
+    
+    self.button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.button3.frame = CGRectMake(0, 0, 50, 50);
+    [self.button3 setTitle:@"我是button" forState:UIControlStateNormal];
+    [self.button3 mj_setBackgroundImage:[MJAppearanceImage mj_imageWithName:@"smile"] forState:UIControlStateNormal];
+    [self.view addSubview:self.button3];
+    self.button3.top = self.button.top;
+    self.button3.left = self.button2.right + 10;
+    
 }
 
 - (void)testBindImage {
