@@ -11,8 +11,6 @@
 		ED181792244AAEC00069B743 /* UIImageView+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED181791244AAEC00069B743 /* UIImageView+MJAppearance.m */; };
 		ED181795244AAF2D0069B743 /* UIButton+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED181794244AAF2D0069B743 /* UIButton+MJAppearance.m */; };
 		ED181798244AAF950069B743 /* UILabel+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED181797244AAF950069B743 /* UILabel+MJAppearance.m */; };
-		ED18179F244AB7FC0069B743 /* appearance_light.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED18179E244AB7FC0069B743 /* appearance_light.plist */; };
-		ED1817A1244AB8CD0069B743 /* appearance_night.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED1817A0244AB8CD0069B743 /* appearance_night.plist */; };
 		ED1817A4244AD67F0069B743 /* NSObject+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A3244AD67F0069B743 /* NSObject+MJAppearance.m */; };
 		ED1817A7244ADF540069B743 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A6244ADF540069B743 /* UIView+Utils.m */; };
 		ED1817AA244B24620069B743 /* UIImage+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */; };
@@ -49,8 +47,6 @@
 		ED181794244AAF2D0069B743 /* UIButton+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MJAppearance.m"; sourceTree = "<group>"; };
 		ED181796244AAF950069B743 /* UILabel+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+MJAppearance.h"; sourceTree = "<group>"; };
 		ED181797244AAF950069B743 /* UILabel+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MJAppearance.m"; sourceTree = "<group>"; };
-		ED18179E244AB7FC0069B743 /* appearance_light.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appearance_light.plist; sourceTree = "<group>"; };
-		ED1817A0244AB8CD0069B743 /* appearance_night.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appearance_night.plist; sourceTree = "<group>"; };
 		ED1817A2244AD67F0069B743 /* NSObject+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJAppearance.h"; sourceTree = "<group>"; };
 		ED1817A3244AD67F0069B743 /* NSObject+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJAppearance.m"; sourceTree = "<group>"; };
 		ED1817A5244ADF540069B743 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = SOURCE_ROOT; };
@@ -59,6 +55,7 @@
 		ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MJAppearance.m"; sourceTree = "<group>"; };
 		ED1817AB244D42600069B743 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cry.png; path = "../../../黑暗图片/cry.png"; sourceTree = "<group>"; };
 		ED1817AD244D42680069B743 /* cry_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cry_dark.png; path = "../../../黑暗图片/cry_dark.png"; sourceTree = "<group>"; };
+		ED1817AF244D5AF60069B743 /* MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJAppearance.h; sourceTree = "<group>"; };
 		EDE2EC63244953C100C4BEAB /* MJAppearnce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJAppearnce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE2EC66244953C100C4BEAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDE2EC67244953C100C4BEAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,7 +100,7 @@
 		ED18178C244AA9B00069B743 /* MJAppearance */ = {
 			isa = PBXGroup;
 			children = (
-				ED18179B244AB7940069B743 /* ColorConfigure */,
+				ED1817AF244D5AF60069B743 /* MJAppearance.h */,
 				ED18179A244AB6AD0069B743 /* Core */,
 				ED181799244AB6660069B743 /* UIKit */,
 			);
@@ -144,15 +141,6 @@
 				ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		ED18179B244AB7940069B743 /* ColorConfigure */ = {
-			isa = PBXGroup;
-			children = (
-				ED1817A0244AB8CD0069B743 /* appearance_night.plist */,
-				ED18179E244AB7FC0069B743 /* appearance_light.plist */,
-			);
-			path = ColorConfigure;
 			sourceTree = "<group>";
 		};
 		EDE2EC5A244953C100C4BEAB = {
@@ -281,11 +269,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED1817A1244AB8CD0069B743 /* appearance_night.plist in Resources */,
 				EDE2EC73244953C200C4BEAB /* Assets.xcassets in Resources */,
 				ED1817AC244D42600069B743 /* cry.png in Resources */,
 				ED1817AE244D42680069B743 /* cry_dark.png in Resources */,
-				ED18179F244AB7FC0069B743 /* appearance_light.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

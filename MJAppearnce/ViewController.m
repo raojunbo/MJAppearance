@@ -7,16 +7,7 @@
 //
 
 #import "ViewController.h"
-
-#import "MJAppearanceColor.h"
-#import "MJAppearanceImage.h"
-
-#import "NSObject+MJAppearance.h"
-#import "UIView+MJAppearance.h"
-#import "UIImageView+MJAppearance.h"
-#import "UILabel+MJAppearance.h"
-#import "UIButton+MJAppearance.h"
-
+#import "MJAppearance.h"
 #import "UIView+Utils.h"
 
 
@@ -114,9 +105,9 @@
 
 - (void)switchTheme {
     if(self.switchView.on){
-        [[NSNotificationCenter defaultCenter] postNotificationName:KAppAppearanceChangeNotifcation object:@"1"];
+        [[MJTheme sharedInstance] switchToDark];
     }else{
-        [[NSNotificationCenter defaultCenter] postNotificationName:KAppAppearanceChangeNotifcation object:@"0"];
+        [[MJTheme sharedInstance] switchToLight];
     }
 }
 

@@ -11,7 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *KAppAppearanceChangeNotifcation = @"KAppAppearanceChangeNotifcation";
 
 typedef void (^MJAppearanceUpdate)(void);
 

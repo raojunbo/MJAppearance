@@ -20,6 +20,22 @@
     return instance;
 }
 
+- (BOOL)switchToLight {
+    BOOL sucess = [self switchToTheme:@"0"];
+    if (sucess) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:KAppThemeChangeNotifcation object:@"1"];
+    }
+    return sucess;
+}
+
+- (BOOL)switchToDark {
+    BOOL sucess =  [self switchToTheme:@"1"];
+    if(sucess){
+        [[NSNotificationCenter defaultCenter] postNotificationName:KAppThemeChangeNotifcation object:@"0"];
+    }
+    return sucess;
+}
+
 - (BOOL)switchToTheme:(NSString *)toThemeIdenfier {
     if ([self.currentTheme.themeIdentifier isEqualToString:toThemeIdenfier]) {
         return NO;

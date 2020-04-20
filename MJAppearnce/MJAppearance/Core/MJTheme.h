@@ -10,6 +10,7 @@
 #import "MJThemeData.h"
 NS_ASSUME_NONNULL_BEGIN
 
+static NSString *KAppThemeChangeNotifcation = @"KAppThemeChangeNotifcation";
 
 @interface MJTheme : NSObject
 
@@ -17,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-- (BOOL)switchToTheme:(NSString *)toThemeIdenfier;
+- (BOOL)switchToLight;
+- (BOOL)switchToDark;
 
 @end
 
