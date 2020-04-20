@@ -11,10 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MJAppearanceImage : NSObject
+//@property (nonatomic,strong)
 
 + (UIImage *)mj_imageWithName:(NSString *)imageName;
 
 + (UIImage *)mj_imageWithContentsOfFile:(NSString *)imageName;
+
+//图片alopl
+//uimgage 层；
 
 @end
 

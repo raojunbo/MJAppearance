@@ -13,13 +13,8 @@
 static NSHashTable *objectWeakHashTable = NULL;
 
 @implementation NSObject (MJAppearance)
-@dynamic appearanceUpdates;
 @dynamic appearanceWorks;
 @dynamic objectWeakHashTable;
-
-//+ (void)initialize {
-//
-//}
 
 + (void)load {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateAppearance:) name:KAppThemeChangeNotifcation object:nil];
@@ -50,21 +45,14 @@ static NSHashTable *objectWeakHashTable = NULL;
     return objectWeakHashTable;
 }
 
-- (void)addObjectToWeakHashTable:(id)object {
+- (void)mj_addObjectToWeakHashTable:(id)object {
     [[self class].objectWeakHashTable addObject:object];
 }
 
-- (void)needUpdateConfige {
-    if(![self.appearanceUpdates objectForKey:@"needUpdate"]){
-        MJAppearanceUpdate updateAppearanceBlock = ^(){
-            [self mj_updateAppearanceColor];
-        };
-        [self.appearanceUpdates setValue:[updateAppearanceBlock copy] forKey:@"needUpdate"];
-    };
-}
-
 - (void)mj_updateAppearanceColor {
-    //空实现，子类自己实现
+    [self.appearanceWorks enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, MJBlockPicker obj, BOOL * _Nonnull stop) {
+        obj();
+    }];
 }
 
 + (void)updateAppearance:(NSNotification *)notification {
@@ -76,11 +64,9 @@ static NSHashTable *objectWeakHashTable = NULL;
             [viewsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 if([obj isKindOfClass:[UIView class]]){
                     UIView *view = obj;
-                    for (NSString *key in view.appearanceUpdates.allKeys) {
-                        if ([key isEqualToString:@"needUpdate"]) {
-                            MJAppearanceUpdate picker = view.appearanceUpdates[key];
-                            picker();
-                        }
+                    BOOL needUpdate = [view respondsToSelector:@selector(mj_updateAppearanceColor)] && (view.appearanceWorks.allKeys.count > 0);
+                    if (needUpdate) {
+                        [view mj_updateAppearanceColor];
                     }
                 }
             }];

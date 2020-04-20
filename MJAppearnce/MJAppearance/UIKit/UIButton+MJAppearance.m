@@ -22,85 +22,41 @@
         return;
     }
     self.tintColor = mj_tintColor;
-    [self.appearanceWorks setValue:mj_tintColor forKey:@"mj_tintColor"];
-    [self needUpdateConfige];
+    MJBlockPicker colorPicker = ^(){
+           self.tintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_tintColor.colorName];
+          };
+    [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
 
 - (UIColor *)mj_tintColor {
-    return [self.appearanceWorks objectForKey:@"mj_tintColor"];
+    return self.tintColor;
 }
 
 - (void)mj_setTitleColor:(UIColor *)color forState:(UIControlState)state {
     [self setTitleColor:color forState:state];
-    //key 为方法签名,value 为参数列表
-    NSMutableDictionary *dictionary = [self.appearanceWorks valueForKey:NSStringFromSelector(_cmd)];
-    if (!dictionary) {
-        dictionary = [[NSMutableDictionary alloc] init];
-    }
-    [dictionary setValue:color forKey:@"color"];
-    [dictionary setValue:@(state) forKey:@"state"];
-    [self.appearanceWorks setValue:dictionary forKey:NSStringFromSelector(_cmd)];
-    [self needUpdateConfige];
+    MJBlockPicker colorPicker = ^(){
+        UIColor *newColor = [MJAppearanceColor mj_appearanceColorWithName:color.colorName];
+        [self mj_setTitleColor:newColor forState:state];
+    };
+    [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
 
 - (void)mj_setBackgroundImage:(UIImage *)image forState:(UIControlState)state {
     [self setBackgroundImage:image forState:state];
-    //key 为方法签名,value 为参数列表
-    NSMutableDictionary *dictionary = [self.appearanceUpdates valueForKey:NSStringFromSelector(_cmd)];
-    if (!dictionary) {
-        dictionary = [[NSMutableDictionary alloc] init];
-    }
-    [dictionary setValue:image.imageName forKey:@"imageName"];
-    [dictionary setValue:@(state) forKey:@"state"];
-    [self.appearanceWorks setValue:dictionary forKey:NSStringFromSelector(_cmd)];
-    [self needUpdateConfige];
+    MJBlockPicker colorPicker = ^(){
+        UIImage *newImage = [MJAppearanceImage mj_imageWithName:image.imageName];
+        [self mj_setBackgroundImage:newImage forState:state];
+       };
+    [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
 
 - (void)mj_setImage:(UIImage *)image forState:(UIControlState)state {
     [self setImage:image forState:state];
-    //key 为方法签名,value 为参数列表
-    NSMutableDictionary *dictionary = [self.appearanceUpdates valueForKey:NSStringFromSelector(_cmd)];
-    if (!dictionary) {
-        dictionary = [[NSMutableDictionary alloc] init];
-    }
-    [dictionary setValue:image.imageName forKey:@"imageName"];
-    [dictionary setValue:@(state) forKey:@"state"];
-    [self.appearanceWorks setValue:dictionary forKey:NSStringFromSelector(_cmd)];
-    [self needUpdateConfige];
+    MJBlockPicker colorPicker = ^(){
+        UIImage *newImage = [MJAppearanceImage mj_imageWithName:image.imageName];
+        [self mj_setImage:newImage forState:state];
+    };
+    [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
-
-- (void)mj_updateAppearanceColor {
-    [self.appearanceWorks enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[NSDictionary class]]) {
-            //key 为签名，object为parms统一处理
-            if ([key isEqualToString:NSStringFromSelector(@selector(mj_setTitleColor:forState:))]) {
-                NSDictionary <NSString *,id> *params = (NSDictionary *)obj;
-                UIColor *originColor = params[@"color"];
-                UIControlState state = [params[@"state"] intValue];
-                UIColor *newColor = [MJAppearanceColor mj_appearanceColorWithName:originColor.colorName];
-                [self mj_setTitleColor:newColor forState:state];
-            }else if([key isEqualToString:NSStringFromSelector(@selector(mj_setBackgroundImage:forState:))]){
-                NSDictionary <NSString *,id> *params = (NSDictionary *)obj;
-                NSString *imageName = params[@"imageName"];
-                UIControlState state = [params[@"state"] intValue];
-                UIImage *newImage = [MJAppearanceImage mj_imageWithName:imageName];
-                [self mj_setBackgroundImage:newImage forState:state];
-            }else if([key isEqualToString:NSStringFromSelector(@selector(mj_setImage:forState:))]){
-                NSDictionary <NSString *,id> *params = (NSDictionary *)obj;
-                  NSString *imageName = params[@"imageName"];
-                UIControlState state = [params[@"state"] intValue];
-                UIImage *newImage = [MJAppearanceImage mj_imageWithName:imageName];
-                [self mj_setImage:newImage forState:state];
-            }
-        }else if([obj isKindOfClass:[UIColor class]]){
-            //key 为属性名，object为属性值(采用kvc方式统一处理)
-            UIColor *originColor = [self valueForKey:key];
-            UIColor *newColor = [MJAppearanceColor mj_appearanceColorWithName:originColor.colorName];
-            newColor.colorName = originColor.colorName;
-            [self setValue:newColor forKey:key];
-        }
-    }];
-}
-
 
 @end

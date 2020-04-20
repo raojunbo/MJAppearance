@@ -1,0 +1,6 @@
+framework module Pods_MJAppearnce {
+  umbrella header "Pods-MJAppearnce-umbrella.h"
+
+  export *
+  module * { export * }
+}

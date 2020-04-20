@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91C4B2874590C509E75B8FFD /* libPods-MJAppearnce-MJAppearnceUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAC9B63468A4137199D59C1 /* libPods-MJAppearnce-MJAppearnceUITests.a */; };
+		B5C6626B924CAD95ECDA184C /* libPods-MJAppearnce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 714D2B73E69A02D4B2B07736 /* libPods-MJAppearnce.a */; };
 		ED1817882449AB9C0069B743 /* UIColor+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817872449AB9C0069B743 /* UIColor+MJAppearance.m */; };
 		ED181792244AAEC00069B743 /* UIImageView+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED181791244AAEC00069B743 /* UIImageView+MJAppearance.m */; };
 		ED181795244AAF2D0069B743 /* UIButton+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED181794244AAF2D0069B743 /* UIButton+MJAppearance.m */; };
@@ -14,8 +16,8 @@
 		ED1817A4244AD67F0069B743 /* NSObject+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A3244AD67F0069B743 /* NSObject+MJAppearance.m */; };
 		ED1817A7244ADF540069B743 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A6244ADF540069B743 /* UIView+Utils.m */; };
 		ED1817AA244B24620069B743 /* UIImage+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */; };
-		ED1817AC244D42600069B743 /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1817AB244D42600069B743 /* cry.png */; };
-		ED1817AE244D42680069B743 /* cry_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1817AD244D42680069B743 /* cry_dark.png */; };
+		ED1817B2244DAB520069B743 /* cry_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1817B0244DAB520069B743 /* cry_dark.png */; };
+		ED1817B3244DAB520069B743 /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1817B1244DAB520069B743 /* cry.png */; };
 		EDE2EC68244953C100C4BEAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC67244953C100C4BEAB /* AppDelegate.m */; };
 		EDE2EC6E244953C100C4BEAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC6D244953C100C4BEAB /* ViewController.m */; };
 		EDE2EC73244953C200C4BEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE2EC72244953C200C4BEAB /* Assets.xcassets */; };
@@ -39,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BAC9B63468A4137199D59C1 /* libPods-MJAppearnce-MJAppearnceUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJAppearnce-MJAppearnceUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55160E58A8B2E7F7516D074C /* Pods-MJAppearnce-MJAppearnceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJAppearnce-MJAppearnceUITests.debug.xcconfig"; path = "Target Support Files/Pods-MJAppearnce-MJAppearnceUITests/Pods-MJAppearnce-MJAppearnceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E3D4245C77347391791E628 /* Pods-MJAppearnce-MJAppearnceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJAppearnce-MJAppearnceUITests.release.xcconfig"; path = "Target Support Files/Pods-MJAppearnce-MJAppearnceUITests/Pods-MJAppearnce-MJAppearnceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		714D2B73E69A02D4B2B07736 /* libPods-MJAppearnce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJAppearnce.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78E1341557F23AC09CA12943 /* Pods-MJAppearnce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJAppearnce.release.xcconfig"; path = "Target Support Files/Pods-MJAppearnce/Pods-MJAppearnce.release.xcconfig"; sourceTree = "<group>"; };
+		9A90AF2767B1BCC1DE72D5DB /* Pods-MJAppearnce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJAppearnce.debug.xcconfig"; path = "Target Support Files/Pods-MJAppearnce/Pods-MJAppearnce.debug.xcconfig"; sourceTree = "<group>"; };
 		ED1817862449AB9C0069B743 /* UIColor+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+MJAppearance.h"; sourceTree = "<group>"; };
 		ED1817872449AB9C0069B743 /* UIColor+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MJAppearance.m"; sourceTree = "<group>"; };
 		ED181790244AAEC00069B743 /* UIImageView+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MJAppearance.h"; sourceTree = "<group>"; };
@@ -53,9 +61,9 @@
 		ED1817A6244ADF540069B743 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = SOURCE_ROOT; };
 		ED1817A8244B24620069B743 /* UIImage+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MJAppearance.h"; sourceTree = "<group>"; };
 		ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MJAppearance.m"; sourceTree = "<group>"; };
-		ED1817AB244D42600069B743 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cry.png; path = "../../../黑暗图片/cry.png"; sourceTree = "<group>"; };
-		ED1817AD244D42680069B743 /* cry_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cry_dark.png; path = "../../../黑暗图片/cry_dark.png"; sourceTree = "<group>"; };
 		ED1817AF244D5AF60069B743 /* MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJAppearance.h; sourceTree = "<group>"; };
+		ED1817B0244DAB520069B743 /* cry_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cry_dark.png; sourceTree = "<group>"; };
+		ED1817B1244DAB520069B743 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cry.png; sourceTree = "<group>"; };
 		EDE2EC63244953C100C4BEAB /* MJAppearnce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJAppearnce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE2EC66244953C100C4BEAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDE2EC67244953C100C4BEAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C6626B924CAD95ECDA184C /* libPods-MJAppearnce.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,12 +100,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C4B2874590C509E75B8FFD /* libPods-MJAppearnce-MJAppearnceUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		493EFF113C7E7FED95F066D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A90AF2767B1BCC1DE72D5DB /* Pods-MJAppearnce.debug.xcconfig */,
+				78E1341557F23AC09CA12943 /* Pods-MJAppearnce.release.xcconfig */,
+				55160E58A8B2E7F7516D074C /* Pods-MJAppearnce-MJAppearnceUITests.debug.xcconfig */,
+				5E3D4245C77347391791E628 /* Pods-MJAppearnce-MJAppearnceUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8835493BC82834E3E448C065 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				714D2B73E69A02D4B2B07736 /* libPods-MJAppearnce.a */,
+				3BAC9B63468A4137199D59C1 /* libPods-MJAppearnce-MJAppearnceUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED18178C244AA9B00069B743 /* MJAppearance */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +140,6 @@
 		ED181799244AB6660069B743 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				ED1817A2244AD67F0069B743 /* NSObject+MJAppearance.h */,
-				ED1817A3244AD67F0069B743 /* NSObject+MJAppearance.m */,
 				EDE2EC9F244988A400C4BEAB /* UIView+MJAppearance.h */,
 				EDE2ECA0244988A400C4BEAB /* UIView+MJAppearance.m */,
 				ED181790244AAEC00069B743 /* UIImageView+MJAppearance.h */,
@@ -139,6 +167,8 @@
 				ED1817872449AB9C0069B743 /* UIColor+MJAppearance.m */,
 				ED1817A8244B24620069B743 /* UIImage+MJAppearance.h */,
 				ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */,
+				ED1817A2244AD67F0069B743 /* NSObject+MJAppearance.h */,
+				ED1817A3244AD67F0069B743 /* NSObject+MJAppearance.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -149,6 +179,8 @@
 				EDE2EC65244953C100C4BEAB /* MJAppearnce */,
 				EDE2EC81244953C200C4BEAB /* MJAppearnceUITests */,
 				EDE2EC64244953C100C4BEAB /* Products */,
+				493EFF113C7E7FED95F066D1 /* Pods */,
+				8835493BC82834E3E448C065 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,8 +201,8 @@
 				ED1817A6244ADF540069B743 /* UIView+Utils.m */,
 				EDE2EC66244953C100C4BEAB /* AppDelegate.h */,
 				EDE2EC67244953C100C4BEAB /* AppDelegate.m */,
-				ED1817AB244D42600069B743 /* cry.png */,
-				ED1817AD244D42680069B743 /* cry_dark.png */,
+				ED1817B0244DAB520069B743 /* cry_dark.png */,
+				ED1817B1244DAB520069B743 /* cry.png */,
 				EDE2EC6C244953C100C4BEAB /* ViewController.h */,
 				EDE2EC6D244953C100C4BEAB /* ViewController.m */,
 				EDE2EC72244953C200C4BEAB /* Assets.xcassets */,
@@ -196,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDE2EC87244953C200C4BEAB /* Build configuration list for PBXNativeTarget "MJAppearnce" */;
 			buildPhases = (
+				2D3B9D7CB8D7A1F27B3132AA /* [CP] Check Pods Manifest.lock */,
 				EDE2EC5F244953C100C4BEAB /* Sources */,
 				EDE2EC60244953C100C4BEAB /* Frameworks */,
 				EDE2EC61244953C100C4BEAB /* Resources */,
@@ -213,6 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDE2EC8A244953C200C4BEAB /* Build configuration list for PBXNativeTarget "MJAppearnceUITests" */;
 			buildPhases = (
+				D255E2648FE5537DFC9D425F /* [CP] Check Pods Manifest.lock */,
 				EDE2EC7A244953C200C4BEAB /* Sources */,
 				EDE2EC7B244953C200C4BEAB /* Frameworks */,
 				EDE2EC7C244953C200C4BEAB /* Resources */,
@@ -269,9 +303,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1817B3244DAB520069B743 /* cry.png in Resources */,
+				ED1817B2244DAB520069B743 /* cry_dark.png in Resources */,
 				EDE2EC73244953C200C4BEAB /* Assets.xcassets in Resources */,
-				ED1817AC244D42600069B743 /* cry.png in Resources */,
-				ED1817AE244D42680069B743 /* cry_dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +317,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D3B9D7CB8D7A1F27B3132AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MJAppearnce-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D255E2648FE5537DFC9D425F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MJAppearnce-MJAppearnceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDE2EC5F244953C100C4BEAB /* Sources */ = {
@@ -438,6 +519,7 @@
 		};
 		EDE2EC88244953C200C4BEAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A90AF2767B1BCC1DE72D5DB /* Pods-MJAppearnce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +537,7 @@
 		};
 		EDE2EC89244953C200C4BEAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78E1341557F23AC09CA12943 /* Pods-MJAppearnce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +555,7 @@
 		};
 		EDE2EC8B244953C200C4BEAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55160E58A8B2E7F7516D074C /* Pods-MJAppearnce-MJAppearnceUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7386VQTH7S;
@@ -490,6 +574,7 @@
 		};
 		EDE2EC8C244953C200C4BEAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E3D4245C77347391791E628 /* Pods-MJAppearnce-MJAppearnceUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7386VQTH7S;

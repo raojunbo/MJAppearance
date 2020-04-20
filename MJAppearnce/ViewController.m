@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "MJAppearance.h"
 #import "UIView+Utils.h"
-
+#import "UIImageView+WebCache.h"
 
 @interface ViewController ()
 
@@ -26,6 +26,8 @@
 @property (nonatomic, strong) UIImageView *imageView3;
 @property (nonatomic, strong) UIImageView *imageView4;
 @property (nonatomic, strong) UIImageView *imageView5;
+@property (nonatomic, strong) UIImageView *imageView6;
+
 
 @end
 
@@ -113,6 +115,7 @@
     NSString *resourcePath = [bundle resourcePath];
     NSString *filePath = [resourcePath stringByAppendingPathComponent:@"cry"];
     self.imageView4.mj_image =  [MJAppearanceImage mj_imageWithContentsOfFile:filePath];
+//    self.imageView6.image =
     [self.view addSubview:self.imageView4];
     self.imageView4.top = self.imageView2.top;
     self.imageView4.left = self.imageView3.right + 10;
@@ -120,9 +123,18 @@
     //直接创建ImageView
     UIImage *cryImage = [MJAppearanceImage mj_imageWithName:@"cry"];
     self.imageView5 = [[UIImageView alloc]mj_initWithImage:cryImage];
+    self.imageView5.frame = CGRectMake(0, 0, 50, 50);
     [self.view addSubview:self.imageView5];
     self.imageView5.top = self.imageView2.top;
     self.imageView5.left = self.imageView4.right + 10;
+    
+    //网络图片
+    self.imageView6 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+    [self.view addSubview:self.imageView6];
+    self.imageView6.top = self.imageView2.top;
+    self.imageView6.left = self.imageView5.right + 10;
+        
+    
     
 }
 

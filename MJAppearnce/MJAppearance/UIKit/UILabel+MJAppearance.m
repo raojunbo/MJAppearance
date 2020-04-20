@@ -9,6 +9,8 @@
 #import "UILabel+MJAppearance.h"
 #import <objc/runtime.h>
 #import "NSObject+MJAppearance.h"
+#import "MJAppearanceColor.h"
+#import "UIColor+MJAppearance.h"
 
 @implementation UILabel (MJAppearance)
 
@@ -17,25 +19,29 @@
         return;
     }
     self.textColor = mj_textColor;
-    [self.appearanceWorks setValue:mj_textColor forKey:@"mj_textColor"];
-    [self needUpdateConfige];
+    MJBlockPicker colorPicker = ^(){
+        self.textColor = [MJAppearanceColor mj_appearanceColorWithName:mj_textColor.colorName];
+    };
+    [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
 
 - (UIColor *)mj_textColor {
-    return [self.appearanceWorks objectForKey:@"mj_textColor"];
+    return self.textColor;
 }
 
 - (void)setMj_shadowColor:(UIColor *)mj_shadowColor {
     if (mj_shadowColor == nil) {
         return;
     }
-    self.textColor = mj_shadowColor;
-    [self.appearanceWorks setValue:mj_shadowColor forKey:@"mj_shadowColor"];
-    [self needUpdateConfige];
+    self.shadowColor = mj_shadowColor;
+    MJBlockPicker colorPicker = ^(){
+        self.shadowColor = [MJAppearanceColor mj_appearanceColorWithName:mj_shadowColor.colorName];
+    };
+    [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
 
 - (UIColor *)mj_shadowColor {
-    return [self.appearanceWorks objectForKey:@"mj_shadowColor"];
+    return self.shadowColor;
 }
 
 - (void)setMj_highlightedTextColor:(UIColor *)mj_highlightedTextColor {
@@ -43,12 +49,14 @@
         return;
     }
     self.highlightedTextColor = mj_highlightedTextColor;
-    [self.appearanceWorks setValue:mj_highlightedTextColor forKey:@"mj_highlightedTextColor"];
-    [self needUpdateConfige];
+    MJBlockPicker colorPicker = ^(){
+        self.highlightedTextColor = [MJAppearanceColor mj_appearanceColorWithName:mj_highlightedTextColor.colorName];
+    };
+    [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
 
 - (UIColor *)mj_highlightedTextColor {
-    return  [self.appearanceWorks objectForKey:@"mj_highlightedTextColor"];
+    return self.highlightedTextColor;
 }
 
 @end
