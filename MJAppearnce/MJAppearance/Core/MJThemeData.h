@@ -12,12 +12,24 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MJThemeData : NSObject
 @property (nonatomic, strong) NSString *themeIdentifier;//主题标识(0=白天，1黑夜)
 @property (nonatomic, strong) NSString *themePicPrefix;//dark_为黑夜
+
 @property (nonatomic, strong) NSString *Mojiblue;//主题蓝
 @property (nonatomic, strong) NSString *page;//底层背景色
 @property (nonatomic, strong) NSString *white;//卡片背景色
+
+@property (nonatomic, strong) NSString *black;//分割线颜色
 @property (nonatomic, strong) NSString *black01;//标题/重要文字/tab选中颜色
 @property (nonatomic, strong) NSString *black02;//tab未选中色/扩展标题
 @property (nonatomic, strong) NSString *black03;//未点击状态色/辅助文字
+@property (nonatomic, strong) NSString *black04;//新增颜色
+@property (nonatomic, strong) NSString *black05;//底部提示信息
+
+@property (nonatomic, strong) NSString *lightgrey;//搜索框底色
+
+@property (nonatomic, strong) NSString *red02;//点赞,信息气泡
+@property (nonatomic, strong) NSString *yellow02;//收藏
+
+
 @end
 
 NS_ASSUME_NONNULL_END

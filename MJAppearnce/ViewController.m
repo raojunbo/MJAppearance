@@ -14,6 +14,7 @@
 @interface ViewController ()
 
 @property (nonatomic, strong) UISwitch *switchView;
+@property (nonatomic, strong) UIButton *toSecondButton;
 
 @property (nonatomic, strong) UIView *normaleView;
 @property (nonatomic, strong) UILabel *label;
@@ -21,6 +22,7 @@
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UIButton *button2;
 @property (nonatomic, strong) UIButton *button3;
+
 
 @property (nonatomic, strong) UIImageView *imageView2;
 @property (nonatomic, strong) UIImageView *imageView3;
@@ -33,6 +35,10 @@
 
 @implementation ViewController
 
+- (void)dealloc
+{
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -40,10 +46,23 @@
     [self.switchView addTarget:self action:@selector(switchTheme) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.switchView];
     
+    self.toSecondButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.toSecondButton.frame = CGRectMake(0, 0, 100, 50);
+    self.toSecondButton.backgroundColor  = [UIColor redColor];
+    [self.toSecondButton addTarget:self action:@selector(toSecondButtonButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.toSecondButton];
+    self.toSecondButton.top = self.switchView.top;
+    self.toSecondButton.left = self.switchView.right + 10;
+    
     [self testBindColorToView];
     [self testBindLabel];
     [self testBindButton];
     [self testBindImageView];
+}
+
+- (void)toSecondButtonButtonClick {
+    ViewController *secondVC = [[ViewController alloc]init];
+    [self.navigationController pushViewController:secondVC animated:YES];
 }
 
 - (void)testBindColorToView {

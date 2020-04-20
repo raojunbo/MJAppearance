@@ -66,7 +66,6 @@
 }
 
 - (MJThemeData *)lightThemData {
-    //读取主题数据
     MJThemeData *themeData = [[MJThemeData alloc]init];
     themeData.themeIdentifier = @"0";
     themeData.themePicPrefix = @"";
@@ -81,7 +80,6 @@
 }
 
 - (MJThemeData *)darkThemData {
-    //读取主题数据
     MJThemeData *themeData = [[MJThemeData alloc]init];
     themeData.themeIdentifier = @"1";
     themeData.themePicPrefix = @"_dark";
@@ -93,7 +91,5 @@
     themeData.black03 = @"#616161";
     return themeData;
 }
-
-
 
 @end
