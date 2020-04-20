@@ -13,15 +13,11 @@
 @implementation MJAppearanceImage
 
 + (UIImage *)mj_imageWithName:(NSString *)imageName {
-    UIImage *image = [self appearanceImageWithName:imageName];
-    image.imageName = imageName;
-    return image;
+    return [self appearanceImageWithName:imageName];;
 }
 
 + (UIImage *)mj_imageWithContentsOfFile:(NSString *)imageName {
-    UIImage *image = [[UIImage alloc]initWithContentsOfFile:imageName];
-    image.imageName = imageName;
-    return image;
+    return [self appearanceImageWithContentsOfFile:imageName];
 }
 
 + (UIImage *)appearanceImageWithName:(NSString *)originImageName {
@@ -30,6 +26,16 @@
     }
     NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJTheme sharedInstance].currentTheme.themePicPrefix];
     UIImage *newImage = [UIImage imageNamed:realImageName];
+    newImage.imageName = originImageName;
+    return newImage;
+}
+
++ (UIImage *)appearanceImageWithContentsOfFile:(NSString *)originImageName {
+    if (!originImageName) {
+        return nil;
+    }
+    NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJTheme sharedInstance].currentTheme.themePicPrefix];
+    UIImage *newImage = [[UIImage  alloc]initWithContentsOfFile:realImageName];
     newImage.imageName = originImageName;
     return newImage;
 }

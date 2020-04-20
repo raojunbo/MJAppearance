@@ -50,7 +50,7 @@
     if (!dictionary) {
         dictionary = [[NSMutableDictionary alloc] init];
     }
-    [dictionary setValue:image forKey:@"image"];
+    [dictionary setValue:image.imageName forKey:@"imageName"];
     [dictionary setValue:@(state) forKey:@"state"];
     [self.appearanceWorks setValue:dictionary forKey:NSStringFromSelector(_cmd)];
     [self needUpdateConfige];
@@ -63,7 +63,7 @@
     if (!dictionary) {
         dictionary = [[NSMutableDictionary alloc] init];
     }
-    [dictionary setValue:image forKey:@"image"];
+    [dictionary setValue:image.imageName forKey:@"imageName"];
     [dictionary setValue:@(state) forKey:@"state"];
     [self.appearanceWorks setValue:dictionary forKey:NSStringFromSelector(_cmd)];
     [self needUpdateConfige];
@@ -81,15 +81,15 @@
                 [self mj_setTitleColor:newColor forState:state];
             }else if([key isEqualToString:NSStringFromSelector(@selector(mj_setBackgroundImage:forState:))]){
                 NSDictionary <NSString *,id> *params = (NSDictionary *)obj;
-                UIImage *originImage = params[@"image"];
+                NSString *imageName = params[@"imageName"];
                 UIControlState state = [params[@"state"] intValue];
-                UIImage *newImage = [MJAppearanceImage mj_imageWithName:originImage.imageName];
+                UIImage *newImage = [MJAppearanceImage mj_imageWithName:imageName];
                 [self mj_setBackgroundImage:newImage forState:state];
             }else if([key isEqualToString:NSStringFromSelector(@selector(mj_setImage:forState:))]){
                 NSDictionary <NSString *,id> *params = (NSDictionary *)obj;
-                UIImage *originImage = params[@"image"];
+                  NSString *imageName = params[@"imageName"];
                 UIControlState state = [params[@"state"] intValue];
-                UIImage *newImage = [MJAppearanceImage mj_imageWithName:originImage.imageName];
+                UIImage *newImage = [MJAppearanceImage mj_imageWithName:imageName];
                 [self mj_setImage:newImage forState:state];
             }
         }else if([obj isKindOfClass:[UIColor class]]){

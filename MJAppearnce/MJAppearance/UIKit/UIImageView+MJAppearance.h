@@ -11,8 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImageView (MJAppearance)
+
+- (instancetype)mj_initWithImage:(UIImage *)image;
+
 @property (nonatomic, strong) UIColor *mj_tintColor;
 @property (nonatomic, strong) UIImage *mj_image;
+
 @end
 
 NS_ASSUME_NONNULL_END

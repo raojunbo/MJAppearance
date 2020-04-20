@@ -24,6 +24,9 @@
 + (void)load {
     Method orgMet = class_getInstanceMethod([self class], @selector(didMoveToSuperview));
     Method newMet = class_getInstanceMethod([self class], @selector(mj_didMoveToSuperview));
+    if (!orgMet || !newMet) {
+        return ;
+    }
     method_exchangeImplementations(orgMet, newMet);
 }
 
@@ -55,14 +58,18 @@
                 UIColor *newColor = [MJAppearanceColor mj_appearanceColorWithName:originColor.colorName];
                 [self setValue:newColor forKey:key];
             }
-        }else if([obj isKindOfClass:[UIImage class]]){
-            //key 为属性名,object为属性值,且是UIImage
-            UIImage *originImage = [self valueForKey:key];
-            if (originImage.imageName) {
-                UIImage *newImage = [MJAppearanceImage mj_imageWithName:originImage.imageName];
-                [self setValue:newImage forKey:key];
-            }
         }
+       
+//        else if([obj isKindOfClass:[NSString class]] && [obj isEqualToString:@"UIImage"]){
+//            //key 为属性名,object为属性值,且是UIImage
+//            //key 为
+//            UIImage *originImage = [self valueForKey:key];
+//            if (originImage.imageName) {
+//                UIImage *newImage = [MJAppearanceImage mj_imageWithName:originImage.imageName];
+//                [self setValue:newImage forKey:key];
+//            }
+//        }
+        
     }];
 }
 
