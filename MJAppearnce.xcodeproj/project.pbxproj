@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED1817882449AB9C0069B743 /* UIColor+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817872449AB9C0069B743 /* UIColor+MJAppearance.m */; };
+		ED181792244AAEC00069B743 /* UIImageView+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED181791244AAEC00069B743 /* UIImageView+MJAppearance.m */; };
+		ED181795244AAF2D0069B743 /* UIButton+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED181794244AAF2D0069B743 /* UIButton+MJAppearance.m */; };
+		ED181798244AAF950069B743 /* UILabel+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED181797244AAF950069B743 /* UILabel+MJAppearance.m */; };
+		ED18179F244AB7FC0069B743 /* appearance_light.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED18179E244AB7FC0069B743 /* appearance_light.plist */; };
+		ED1817A1244AB8CD0069B743 /* appearance_night.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED1817A0244AB8CD0069B743 /* appearance_night.plist */; };
+		ED1817A4244AD67F0069B743 /* NSObject+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A3244AD67F0069B743 /* NSObject+MJAppearance.m */; };
+		ED1817A7244ADF540069B743 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A6244ADF540069B743 /* UIView+Utils.m */; };
+		ED1817AA244B24620069B743 /* UIImage+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */; };
+		ED1817AC244D42600069B743 /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1817AB244D42600069B743 /* cry.png */; };
+		ED1817AE244D42680069B743 /* cry_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1817AD244D42680069B743 /* cry_dark.png */; };
+		EDE2EC68244953C100C4BEAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC67244953C100C4BEAB /* AppDelegate.m */; };
+		EDE2EC6E244953C100C4BEAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC6D244953C100C4BEAB /* ViewController.m */; };
+		EDE2EC73244953C200C4BEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE2EC72244953C200C4BEAB /* Assets.xcassets */; };
+		EDE2EC79244953C200C4BEAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC78244953C200C4BEAB /* main.m */; };
+		EDE2EC83244953C200C4BEAB /* MJAppearnceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC82244953C200C4BEAB /* MJAppearnceUITests.m */; };
+		EDE2EC8F244954C200C4BEAB /* MJAppearanceColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC8D244954C200C4BEAB /* MJAppearanceColor.m */; };
+		EDE2EC922449560C00C4BEAB /* MJAppearanceImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC912449560C00C4BEAB /* MJAppearanceImage.m */; };
+		EDE2EC952449586200C4BEAB /* MJTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC942449586200C4BEAB /* MJTheme.m */; };
+		EDE2EC982449587000C4BEAB /* MJThemeData.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC972449587000C4BEAB /* MJThemeData.m */; };
+		EDE2ECA1244988A400C4BEAB /* UIView+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2ECA0244988A400C4BEAB /* UIView+MJAppearance.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDE2EC7F244953C200C4BEAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDE2EC5B244953C100C4BEAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE2EC62244953C100C4BEAB;
+			remoteInfo = MJAppearnce;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED1817862449AB9C0069B743 /* UIColor+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817872449AB9C0069B743 /* UIColor+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MJAppearance.m"; sourceTree = "<group>"; };
+		ED181790244AAEC00069B743 /* UIImageView+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MJAppearance.h"; sourceTree = "<group>"; };
+		ED181791244AAEC00069B743 /* UIImageView+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MJAppearance.m"; sourceTree = "<group>"; };
+		ED181793244AAF2D0069B743 /* UIButton+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+MJAppearance.h"; sourceTree = "<group>"; };
+		ED181794244AAF2D0069B743 /* UIButton+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MJAppearance.m"; sourceTree = "<group>"; };
+		ED181796244AAF950069B743 /* UILabel+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+MJAppearance.h"; sourceTree = "<group>"; };
+		ED181797244AAF950069B743 /* UILabel+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MJAppearance.m"; sourceTree = "<group>"; };
+		ED18179E244AB7FC0069B743 /* appearance_light.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appearance_light.plist; sourceTree = "<group>"; };
+		ED1817A0244AB8CD0069B743 /* appearance_night.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appearance_night.plist; sourceTree = "<group>"; };
+		ED1817A2244AD67F0069B743 /* NSObject+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817A3244AD67F0069B743 /* NSObject+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817A5244ADF540069B743 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = SOURCE_ROOT; };
+		ED1817A6244ADF540069B743 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = SOURCE_ROOT; };
+		ED1817A8244B24620069B743 /* UIImage+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817AB244D42600069B743 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cry.png; path = "../../../黑暗图片/cry.png"; sourceTree = "<group>"; };
+		ED1817AD244D42680069B743 /* cry_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cry_dark.png; path = "../../../黑暗图片/cry_dark.png"; sourceTree = "<group>"; };
+		EDE2EC63244953C100C4BEAB /* MJAppearnce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJAppearnce.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE2EC66244953C100C4BEAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EDE2EC67244953C100C4BEAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EDE2EC6C244953C100C4BEAB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EDE2EC6D244953C100C4BEAB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EDE2EC72244953C200C4BEAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDE2EC77244953C200C4BEAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE2EC78244953C200C4BEAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EDE2EC7E244953C200C4BEAB /* MJAppearnceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJAppearnceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE2EC82244953C200C4BEAB /* MJAppearnceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJAppearnceUITests.m; sourceTree = "<group>"; };
+		EDE2EC84244953C200C4BEAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE2EC8D244954C200C4BEAB /* MJAppearanceColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAppearanceColor.m; sourceTree = "<group>"; };
+		EDE2EC8E244954C200C4BEAB /* MJAppearanceColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAppearanceColor.h; sourceTree = "<group>"; };
+		EDE2EC902449560C00C4BEAB /* MJAppearanceImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJAppearanceImage.h; sourceTree = "<group>"; };
+		EDE2EC912449560C00C4BEAB /* MJAppearanceImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJAppearanceImage.m; sourceTree = "<group>"; };
+		EDE2EC932449586200C4BEAB /* MJTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJTheme.h; sourceTree = "<group>"; };
+		EDE2EC942449586200C4BEAB /* MJTheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJTheme.m; sourceTree = "<group>"; };
+		EDE2EC962449587000C4BEAB /* MJThemeData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJThemeData.h; sourceTree = "<group>"; };
+		EDE2EC972449587000C4BEAB /* MJThemeData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJThemeData.m; sourceTree = "<group>"; };
+		EDE2EC9F244988A400C4BEAB /* UIView+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MJAppearance.h"; sourceTree = "<group>"; };
+		EDE2ECA0244988A400C4BEAB /* UIView+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJAppearance.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDE2EC60244953C100C4BEAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE2EC7B244953C200C4BEAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED18178C244AA9B00069B743 /* MJAppearance */ = {
+			isa = PBXGroup;
+			children = (
+				ED18179B244AB7940069B743 /* ColorConfigure */,
+				ED18179A244AB6AD0069B743 /* Core */,
+				ED181799244AB6660069B743 /* UIKit */,
+			);
+			path = MJAppearance;
+			sourceTree = "<group>";
+		};
+		ED181799244AB6660069B743 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				ED1817A2244AD67F0069B743 /* NSObject+MJAppearance.h */,
+				ED1817A3244AD67F0069B743 /* NSObject+MJAppearance.m */,
+				EDE2EC9F244988A400C4BEAB /* UIView+MJAppearance.h */,
+				EDE2ECA0244988A400C4BEAB /* UIView+MJAppearance.m */,
+				ED181790244AAEC00069B743 /* UIImageView+MJAppearance.h */,
+				ED181791244AAEC00069B743 /* UIImageView+MJAppearance.m */,
+				ED181796244AAF950069B743 /* UILabel+MJAppearance.h */,
+				ED181797244AAF950069B743 /* UILabel+MJAppearance.m */,
+				ED181793244AAF2D0069B743 /* UIButton+MJAppearance.h */,
+				ED181794244AAF2D0069B743 /* UIButton+MJAppearance.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		ED18179A244AB6AD0069B743 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EDE2EC8E244954C200C4BEAB /* MJAppearanceColor.h */,
+				EDE2EC8D244954C200C4BEAB /* MJAppearanceColor.m */,
+				EDE2EC902449560C00C4BEAB /* MJAppearanceImage.h */,
+				EDE2EC912449560C00C4BEAB /* MJAppearanceImage.m */,
+				EDE2EC932449586200C4BEAB /* MJTheme.h */,
+				EDE2EC942449586200C4BEAB /* MJTheme.m */,
+				EDE2EC962449587000C4BEAB /* MJThemeData.h */,
+				EDE2EC972449587000C4BEAB /* MJThemeData.m */,
+				ED1817862449AB9C0069B743 /* UIColor+MJAppearance.h */,
+				ED1817872449AB9C0069B743 /* UIColor+MJAppearance.m */,
+				ED1817A8244B24620069B743 /* UIImage+MJAppearance.h */,
+				ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ED18179B244AB7940069B743 /* ColorConfigure */ = {
+			isa = PBXGroup;
+			children = (
+				ED1817A0244AB8CD0069B743 /* appearance_night.plist */,
+				ED18179E244AB7FC0069B743 /* appearance_light.plist */,
+			);
+			path = ColorConfigure;
+			sourceTree = "<group>";
+		};
+		EDE2EC5A244953C100C4BEAB = {
+			isa = PBXGroup;
+			children = (
+				EDE2EC65244953C100C4BEAB /* MJAppearnce */,
+				EDE2EC81244953C200C4BEAB /* MJAppearnceUITests */,
+				EDE2EC64244953C100C4BEAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDE2EC64244953C100C4BEAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDE2EC63244953C100C4BEAB /* MJAppearnce.app */,
+				EDE2EC7E244953C200C4BEAB /* MJAppearnceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDE2EC65244953C100C4BEAB /* MJAppearnce */ = {
+			isa = PBXGroup;
+			children = (
+				ED18178C244AA9B00069B743 /* MJAppearance */,
+				ED1817A5244ADF540069B743 /* UIView+Utils.h */,
+				ED1817A6244ADF540069B743 /* UIView+Utils.m */,
+				EDE2EC66244953C100C4BEAB /* AppDelegate.h */,
+				EDE2EC67244953C100C4BEAB /* AppDelegate.m */,
+				ED1817AB244D42600069B743 /* cry.png */,
+				ED1817AD244D42680069B743 /* cry_dark.png */,
+				EDE2EC6C244953C100C4BEAB /* ViewController.h */,
+				EDE2EC6D244953C100C4BEAB /* ViewController.m */,
+				EDE2EC72244953C200C4BEAB /* Assets.xcassets */,
+				EDE2EC77244953C200C4BEAB /* Info.plist */,
+				EDE2EC78244953C200C4BEAB /* main.m */,
+			);
+			path = MJAppearnce;
+			sourceTree = "<group>";
+		};
+		EDE2EC81244953C200C4BEAB /* MJAppearnceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDE2EC82244953C200C4BEAB /* MJAppearnceUITests.m */,
+				EDE2EC84244953C200C4BEAB /* Info.plist */,
+			);
+			path = MJAppearnceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDE2EC62244953C100C4BEAB /* MJAppearnce */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE2EC87244953C200C4BEAB /* Build configuration list for PBXNativeTarget "MJAppearnce" */;
+			buildPhases = (
+				EDE2EC5F244953C100C4BEAB /* Sources */,
+				EDE2EC60244953C100C4BEAB /* Frameworks */,
+				EDE2EC61244953C100C4BEAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MJAppearnce;
+			productName = MJAppearnce;
+			productReference = EDE2EC63244953C100C4BEAB /* MJAppearnce.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDE2EC7D244953C200C4BEAB /* MJAppearnceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE2EC8A244953C200C4BEAB /* Build configuration list for PBXNativeTarget "MJAppearnceUITests" */;
+			buildPhases = (
+				EDE2EC7A244953C200C4BEAB /* Sources */,
+				EDE2EC7B244953C200C4BEAB /* Frameworks */,
+				EDE2EC7C244953C200C4BEAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDE2EC80244953C200C4BEAB /* PBXTargetDependency */,
+			);
+			name = MJAppearnceUITests;
+			productName = MJAppearnceUITests;
+			productReference = EDE2EC7E244953C200C4BEAB /* MJAppearnceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDE2EC5B244953C100C4BEAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = rjb;
+				TargetAttributes = {
+					EDE2EC62244953C100C4BEAB = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					EDE2EC7D244953C200C4BEAB = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = EDE2EC62244953C100C4BEAB;
+					};
+				};
+			};
+			buildConfigurationList = EDE2EC5E244953C100C4BEAB /* Build configuration list for PBXProject "MJAppearnce" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDE2EC5A244953C100C4BEAB;
+			productRefGroup = EDE2EC64244953C100C4BEAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDE2EC62244953C100C4BEAB /* MJAppearnce */,
+				EDE2EC7D244953C200C4BEAB /* MJAppearnceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDE2EC61244953C100C4BEAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED1817A1244AB8CD0069B743 /* appearance_night.plist in Resources */,
+				EDE2EC73244953C200C4BEAB /* Assets.xcassets in Resources */,
+				ED1817AC244D42600069B743 /* cry.png in Resources */,
+				ED1817AE244D42680069B743 /* cry_dark.png in Resources */,
+				ED18179F244AB7FC0069B743 /* appearance_light.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE2EC7C244953C200C4BEAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDE2EC5F244953C100C4BEAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED1817AA244B24620069B743 /* UIImage+MJAppearance.m in Sources */,
+				EDE2EC6E244953C100C4BEAB /* ViewController.m in Sources */,
+				EDE2EC8F244954C200C4BEAB /* MJAppearanceColor.m in Sources */,
+				ED1817A4244AD67F0069B743 /* NSObject+MJAppearance.m in Sources */,
+				ED1817A7244ADF540069B743 /* UIView+Utils.m in Sources */,
+				ED181795244AAF2D0069B743 /* UIButton+MJAppearance.m in Sources */,
+				EDE2EC68244953C100C4BEAB /* AppDelegate.m in Sources */,
+				EDE2ECA1244988A400C4BEAB /* UIView+MJAppearance.m in Sources */,
+				EDE2EC79244953C200C4BEAB /* main.m in Sources */,
+				EDE2EC982449587000C4BEAB /* MJThemeData.m in Sources */,
+				ED181792244AAEC00069B743 /* UIImageView+MJAppearance.m in Sources */,
+				EDE2EC922449560C00C4BEAB /* MJAppearanceImage.m in Sources */,
+				ED1817882449AB9C0069B743 /* UIColor+MJAppearance.m in Sources */,
+				ED181798244AAF950069B743 /* UILabel+MJAppearance.m in Sources */,
+				EDE2EC952449586200C4BEAB /* MJTheme.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE2EC7A244953C200C4BEAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE2EC83244953C200C4BEAB /* MJAppearnceUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDE2EC80244953C200C4BEAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDE2EC62244953C100C4BEAB /* MJAppearnce */;
+			targetProxy = EDE2EC7F244953C200C4BEAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDE2EC85244953C200C4BEAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EDE2EC86244953C200C4BEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDE2EC88244953C200C4BEAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7386VQTH7S;
+				INFOPLIST_FILE = MJAppearnce/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moji.com.MJAppearnce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDE2EC89244953C200C4BEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7386VQTH7S;
+				INFOPLIST_FILE = MJAppearnce/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moji.com.MJAppearnce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EDE2EC8B244953C200C4BEAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7386VQTH7S;
+				INFOPLIST_FILE = MJAppearnceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moji.com.MJAppearnceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MJAppearnce;
+			};
+			name = Debug;
+		};
+		EDE2EC8C244953C200C4BEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7386VQTH7S;
+				INFOPLIST_FILE = MJAppearnceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moji.com.MJAppearnceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MJAppearnce;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDE2EC5E244953C100C4BEAB /* Build configuration list for PBXProject "MJAppearnce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE2EC85244953C200C4BEAB /* Debug */,
+				EDE2EC86244953C200C4BEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE2EC87244953C200C4BEAB /* Build configuration list for PBXNativeTarget "MJAppearnce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE2EC88244953C200C4BEAB /* Debug */,
+				EDE2EC89244953C200C4BEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE2EC8A244953C200C4BEAB /* Build configuration list for PBXNativeTarget "MJAppearnceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE2EC8B244953C200C4BEAB /* Debug */,
+				EDE2EC8C244953C200C4BEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDE2EC5B244953C100C4BEAB /* Project object */;
+}
