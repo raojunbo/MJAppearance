@@ -24,7 +24,8 @@
     if (!originImageName) {
         return nil;
     }
-    NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJTheme sharedInstance].currentTheme.themePicPrefix];
+    NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJTheme sharedInstance].currentThemePicSuffix];
+    
     UIImage *newImage = [UIImage imageNamed:realImageName];
     newImage.imageName = originImageName;
     return newImage;
@@ -34,7 +35,7 @@
     if (!originImageName) {
         return nil;
     }
-    NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJTheme sharedInstance].currentTheme.themePicPrefix];
+    NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJTheme sharedInstance].currentThemePicSuffix];
     UIImage *newImage = [[UIImage  alloc]initWithContentsOfFile:realImageName];
     newImage.imageName = originImageName;
     return newImage;

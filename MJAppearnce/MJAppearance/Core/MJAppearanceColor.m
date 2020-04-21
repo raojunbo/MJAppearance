@@ -8,48 +8,39 @@
 
 #import "MJAppearanceColor.h"
 #import "MJTheme.h"
-#import "NSObject+MJAppearance.h"
-#import "UIColor+MJAppearance.h"
-#import "UIView+MJAppearance.h"
-#import "UIButton+MJAppearance.h"
+#import "MJAppearanceColorTable.h"
 
-@interface MJAppearanceColor()
+@interface MJAppearanceColorHandler : NSObject
+@property (nonatomic, strong) NSDictionary *colorsTable;
 @end
+@implementation MJAppearanceColorHandler
 
-@implementation MJAppearanceColor
++ (instancetype)sharedInstance {
+    static MJAppearanceColorHandler *instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[self alloc]init];
+    });
+    
+    return instance;
+}
 
-+ (UIColor *)mj_appearanceColorWithName:(NSString *)appearanceColorName {
-    if (!appearanceColorName) {
-        return nil;
+- (instancetype)init {
+    if(self = [super init]){
+         _colorsTable = [MJAppearanceColorTable colorConfigures];
     }
-    NSString *colorHexValue = [[MJTheme sharedInstance].currentTheme valueForKey:appearanceColorName];
-    UIColor *colorValue =  [self.class mjlw_colorFromHexString:colorHexValue alpha:1];
-    colorValue.colorName = appearanceColorName;
-    return colorValue;
+    return self;
 }
 
-+ (UIColor *)Mojiblue {
-    return [self mj_appearanceColorWithName:@"Mojiblue"];
-}
-
-+ (UIColor *)page {
-    return  [self mj_appearanceColorWithName:@"page"];;
-}
-
-+ (UIColor*)white {
-    return [self mj_appearanceColorWithName:@"white"];
-}
-
-+ (UIColor *)black01 {
-    return [self mj_appearanceColorWithName:@"black01"];
-}
-
-+ (UIColor *)black02 {
-    return [self mj_appearanceColorWithName:@"black02"];
-}
-
-+ (UIColor *)black03 {
-    return [self mj_appearanceColorWithName:@"black03"];
+- (UIColor *)colorWithName:(NSString *)colorName {
+    NSDictionary *colorDict = [self.colorsTable objectForKey:colorName];
+    if (!colorDict) {
+        return nil;//颜色配置不存在
+    }
+    NSString *hexColorStr = [colorDict objectForKey:[MJTheme sharedInstance].currentThemeIdentifier];
+    UIColor *newColor = [self.class mjlw_colorFromHexString:hexColorStr alpha:1];
+    newColor.colorName = colorName;
+    return newColor;
 }
 
 + (UIColor *)mjlw_colorFromHexString:(NSString *)hexString alpha:(CGFloat)alpha {
@@ -65,3 +56,53 @@
 }
 
 @end
+
+
+@class MJAppearanceColorHandler;
+@interface MJAppearanceColor()
+@end
+
+@implementation MJAppearanceColor
+
+//只配置颜色，不做代码修改
+
++ (UIColor *)mj_appearanceColorWithName:(NSString *)appearanceColorName {
+    if (!appearanceColorName) {
+        return nil;
+    }
+    UIColor *colorValue =  [[MJAppearanceColorHandler sharedInstance] colorWithName:appearanceColorName];
+    colorValue.colorName = appearanceColorName;
+    return colorValue;
+}
+
+//+ (UIColor *)Mojiblue {
+//    return [self mj_appearanceColorWithName:@"Mojiblue"];
+//}
+//
+//+ (UIColor *)Mojiblue2 {
+//    return [self mj_appearanceColorWithName:@"Mojiblue"];
+//}
+//
+//+ (UIColor *)page {
+//    return  [self mj_appearanceColorWithName:@"page"];;
+//}
+//
+//+ (UIColor*)white {
+//    return [self mj_appearanceColorWithName:@"white"];
+//}
+//
+//+ (UIColor *)black01 {
+//    return [self mj_appearanceColorWithName:@"black01"];
+//}
+//
+//+ (UIColor *)black02 {
+//    return [self mj_appearanceColorWithName:@"black02"];
+//}
+//
+//+ (UIColor *)black03 {
+//    return [self mj_appearanceColorWithName:@"black03"];
+//}
+
+@end
+
+

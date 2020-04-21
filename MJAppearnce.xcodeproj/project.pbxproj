@@ -18,6 +18,16 @@
 		ED1817AA244B24620069B743 /* UIImage+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817A9244B24620069B743 /* UIImage+MJAppearance.m */; };
 		ED1817B2244DAB520069B743 /* cry_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1817B0244DAB520069B743 /* cry_dark.png */; };
 		ED1817B3244DAB520069B743 /* cry.png in Resources */ = {isa = PBXBuildFile; fileRef = ED1817B1244DAB520069B743 /* cry.png */; };
+		ED1817B6244EEB0E0069B743 /* UINavigationBar+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817B5244EEB0E0069B743 /* UINavigationBar+MJAppearance.m */; };
+		ED1817B9244EEE1B0069B743 /* UITextFiled+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817B8244EEE1B0069B743 /* UITextFiled+MJAppearance.m */; };
+		ED1817BC244EF1440069B743 /* UISlider+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817BB244EF1440069B743 /* UISlider+MJAppearance.m */; };
+		ED1817BF244EF34B0069B743 /* UISwitch+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817BE244EF34B0069B743 /* UISwitch+MJAppearance.m */; };
+		ED1817C2244EF5B60069B743 /* UIPageControl+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817C1244EF5B60069B743 /* UIPageControl+MJAppearance.m */; };
+		ED1817C5244EF8530069B743 /* UIProgressView+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817C4244EF8530069B743 /* UIProgressView+MJAppearance.m */; };
+		ED1817C8244EFA610069B743 /* UISearchBar+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817C7244EFA610069B743 /* UISearchBar+MJAppearance.m */; };
+		ED1817CB244EFC100069B743 /* UITableView+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817CA244EFC100069B743 /* UITableView+MJAppearance.m */; };
+		ED1817CE244EFF310069B743 /* UIBarButtonItem+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817CD244EFF310069B743 /* UIBarButtonItem+MJAppearance.m */; };
+		ED1817D1244F11BF0069B743 /* MJAppearanceColorTable.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1817D0244F11BF0069B743 /* MJAppearanceColorTable.m */; };
 		EDE2EC68244953C100C4BEAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC67244953C100C4BEAB /* AppDelegate.m */; };
 		EDE2EC6E244953C100C4BEAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC6D244953C100C4BEAB /* ViewController.m */; };
 		EDE2EC73244953C200C4BEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE2EC72244953C200C4BEAB /* Assets.xcassets */; };
@@ -64,6 +74,26 @@
 		ED1817AF244D5AF60069B743 /* MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJAppearance.h; sourceTree = "<group>"; };
 		ED1817B0244DAB520069B743 /* cry_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cry_dark.png; sourceTree = "<group>"; };
 		ED1817B1244DAB520069B743 /* cry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cry.png; sourceTree = "<group>"; };
+		ED1817B4244EEB0E0069B743 /* UINavigationBar+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817B5244EEB0E0069B743 /* UINavigationBar+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817B7244EEE1B0069B743 /* UITextFiled+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextFiled+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817B8244EEE1B0069B743 /* UITextFiled+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextFiled+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817BA244EF1440069B743 /* UISlider+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISlider+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817BB244EF1440069B743 /* UISlider+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISlider+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817BD244EF34B0069B743 /* UISwitch+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISwitch+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817BE244EF34B0069B743 /* UISwitch+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817C0244EF5B60069B743 /* UIPageControl+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIPageControl+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817C1244EF5B60069B743 /* UIPageControl+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIPageControl+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817C3244EF8530069B743 /* UIProgressView+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817C4244EF8530069B743 /* UIProgressView+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817C6244EFA610069B743 /* UISearchBar+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817C7244EFA610069B743 /* UISearchBar+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817C9244EFC100069B743 /* UITableView+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817CA244EFC100069B743 /* UITableView+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817CC244EFF310069B743 /* UIBarButtonItem+MJAppearance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+MJAppearance.h"; sourceTree = "<group>"; };
+		ED1817CD244EFF310069B743 /* UIBarButtonItem+MJAppearance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MJAppearance.m"; sourceTree = "<group>"; };
+		ED1817CF244F11BF0069B743 /* MJAppearanceColorTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJAppearanceColorTable.h; sourceTree = "<group>"; };
+		ED1817D0244F11BF0069B743 /* MJAppearanceColorTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJAppearanceColorTable.m; sourceTree = "<group>"; };
 		EDE2EC63244953C100C4BEAB /* MJAppearnce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJAppearnce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE2EC66244953C100C4BEAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDE2EC67244953C100C4BEAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				ED1817AF244D5AF60069B743 /* MJAppearance.h */,
+				ED1817CF244F11BF0069B743 /* MJAppearanceColorTable.h */,
+				ED1817D0244F11BF0069B743 /* MJAppearanceColorTable.m */,
 				ED18179A244AB6AD0069B743 /* Core */,
 				ED181799244AB6660069B743 /* UIKit */,
 			);
@@ -140,6 +172,24 @@
 		ED181799244AB6660069B743 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				ED1817CC244EFF310069B743 /* UIBarButtonItem+MJAppearance.h */,
+				ED1817CD244EFF310069B743 /* UIBarButtonItem+MJAppearance.m */,
+				ED1817C9244EFC100069B743 /* UITableView+MJAppearance.h */,
+				ED1817CA244EFC100069B743 /* UITableView+MJAppearance.m */,
+				ED1817C6244EFA610069B743 /* UISearchBar+MJAppearance.h */,
+				ED1817C7244EFA610069B743 /* UISearchBar+MJAppearance.m */,
+				ED1817C0244EF5B60069B743 /* UIPageControl+MJAppearance.h */,
+				ED1817C1244EF5B60069B743 /* UIPageControl+MJAppearance.m */,
+				ED1817C3244EF8530069B743 /* UIProgressView+MJAppearance.h */,
+				ED1817C4244EF8530069B743 /* UIProgressView+MJAppearance.m */,
+				ED1817BD244EF34B0069B743 /* UISwitch+MJAppearance.h */,
+				ED1817BE244EF34B0069B743 /* UISwitch+MJAppearance.m */,
+				ED1817BA244EF1440069B743 /* UISlider+MJAppearance.h */,
+				ED1817BB244EF1440069B743 /* UISlider+MJAppearance.m */,
+				ED1817B4244EEB0E0069B743 /* UINavigationBar+MJAppearance.h */,
+				ED1817B5244EEB0E0069B743 /* UINavigationBar+MJAppearance.m */,
+				ED1817B7244EEE1B0069B743 /* UITextFiled+MJAppearance.h */,
+				ED1817B8244EEE1B0069B743 /* UITextFiled+MJAppearance.m */,
 				EDE2EC9F244988A400C4BEAB /* UIView+MJAppearance.h */,
 				EDE2ECA0244988A400C4BEAB /* UIView+MJAppearance.m */,
 				ED181790244AAEC00069B743 /* UIImageView+MJAppearance.h */,
@@ -370,20 +420,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1817C8244EFA610069B743 /* UISearchBar+MJAppearance.m in Sources */,
+				ED1817D1244F11BF0069B743 /* MJAppearanceColorTable.m in Sources */,
+				ED1817B9244EEE1B0069B743 /* UITextFiled+MJAppearance.m in Sources */,
+				ED1817C2244EF5B60069B743 /* UIPageControl+MJAppearance.m in Sources */,
 				ED1817AA244B24620069B743 /* UIImage+MJAppearance.m in Sources */,
 				EDE2EC6E244953C100C4BEAB /* ViewController.m in Sources */,
 				EDE2EC8F244954C200C4BEAB /* MJAppearanceColor.m in Sources */,
 				ED1817A4244AD67F0069B743 /* NSObject+MJAppearance.m in Sources */,
+				ED1817BC244EF1440069B743 /* UISlider+MJAppearance.m in Sources */,
 				ED1817A7244ADF540069B743 /* UIView+Utils.m in Sources */,
 				ED181795244AAF2D0069B743 /* UIButton+MJAppearance.m in Sources */,
+				ED1817C5244EF8530069B743 /* UIProgressView+MJAppearance.m in Sources */,
 				EDE2EC68244953C100C4BEAB /* AppDelegate.m in Sources */,
 				EDE2ECA1244988A400C4BEAB /* UIView+MJAppearance.m in Sources */,
 				EDE2EC79244953C200C4BEAB /* main.m in Sources */,
 				EDE2EC982449587000C4BEAB /* MJThemeData.m in Sources */,
 				ED181792244AAEC00069B743 /* UIImageView+MJAppearance.m in Sources */,
+				ED1817CB244EFC100069B743 /* UITableView+MJAppearance.m in Sources */,
+				ED1817CE244EFF310069B743 /* UIBarButtonItem+MJAppearance.m in Sources */,
 				EDE2EC922449560C00C4BEAB /* MJAppearanceImage.m in Sources */,
 				ED1817882449AB9C0069B743 /* UIColor+MJAppearance.m in Sources */,
+				ED1817BF244EF34B0069B743 /* UISwitch+MJAppearance.m in Sources */,
 				ED181798244AAF950069B743 /* UILabel+MJAppearance.m in Sources */,
+				ED1817B6244EEB0E0069B743 /* UINavigationBar+MJAppearance.m in Sources */,
 				EDE2EC952449586200C4BEAB /* MJTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

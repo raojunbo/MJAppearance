@@ -7,19 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UIColor+MJAppearance.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MJAppearanceColor : NSObject
 
-+ (UIColor *)mj_appearanceColorWithName:(NSString *)colorName;
+#define MJColorWithName(name) [MJAppearanceColor mj_appearanceColorWithName:@#name]
 
-+ (UIColor *)Mojiblue;
-+ (UIColor *)page;
-+ (UIColor *)white;
-+ (UIColor *)black01;
-+ (UIColor *)black02;
-+ (UIColor *)black03;
++ (UIColor *)mj_appearanceColorWithName:(NSString *)colorName;
 
 @end
 

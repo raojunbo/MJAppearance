@@ -18,6 +18,7 @@
 #import "UIImageView+MJAppearance.h"
 #import "UILabel+MJAppearance.h"
 #import "UIButton+MJAppearance.h"
+#import "UINavigationBar+MJAppearance.h"
 
 
 #endif /* MJAppearance_h */

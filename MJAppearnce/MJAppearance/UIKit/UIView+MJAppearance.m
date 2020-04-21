@@ -12,8 +12,8 @@
 #import "MJAppearanceColor.h"
 #import "MJAppearanceImage.h"
 #import "MJTheme.h"
-#import "UIColor+MJAppearance.h"
-#import "UIImage+MJAppearance.h"
+//#import "UIColor+MJAppearance.h"
+//#import "UIImage+MJAppearance.h"
 
 @interface UIView ()
 
