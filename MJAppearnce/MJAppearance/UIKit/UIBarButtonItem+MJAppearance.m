@@ -19,7 +19,7 @@
     }
     self.tintColor = mj_tintColor;
     MJBlockPicker colorPicker = ^(){
-        self.tintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_tintColor.colorName];;
+        self.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

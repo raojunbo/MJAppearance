@@ -22,7 +22,7 @@
     }
     self.separatorColor = mj_separatorColor;
     MJBlockPicker colorPicker = ^(){
-        self.separatorColor = [MJAppearanceColor mj_appearanceColorWithName:mj_separatorColor.colorName];;
+        self.separatorColor = [MJColor mj_appearanceColorWithName:mj_separatorColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
     
@@ -34,7 +34,7 @@
     }
     self.sectionIndexColor = mj_sectionIndexColor;
     MJBlockPicker colorPicker = ^(){
-        self.separatorColor = [MJAppearanceColor mj_appearanceColorWithName:mj_sectionIndexColor.colorName];;
+        self.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -45,7 +45,7 @@
     }
     self.sectionIndexBackgroundColor = mj_sectionIndexBackgroundColor;
     MJBlockPicker colorPicker = ^(){
-        self.separatorColor = [MJAppearanceColor mj_appearanceColorWithName:mj_sectionIndexBackgroundColor.colorName];;
+        self.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexBackgroundColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -56,7 +56,7 @@
     }
     self.sectionIndexBackgroundColor = mj_sectionIndexTrackingBackgroundColor;
     MJBlockPicker colorPicker = ^(){
-        self.separatorColor = [MJAppearanceColor mj_appearanceColorWithName:mj_sectionIndexTrackingBackgroundColor.colorName];;
+        self.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexTrackingBackgroundColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

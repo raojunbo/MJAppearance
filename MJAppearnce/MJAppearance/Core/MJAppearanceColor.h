@@ -12,10 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MJAppearanceColor : NSObject
 
-#define MJColorWithName(name) [MJAppearanceColor mj_appearanceColorWithName:@#name]
+#define MJColor [MJAppearanceColor sharedInstance]
 
-+ (UIColor *)mj_appearanceColorWithName:(NSString *)colorName;
++ (instancetype)sharedInstance;
+- (UIColor *)mj_appearanceColorWithName:(NSString *)colorName;
 
+@property (nonatomic, strong) UIColor *Mojiblue;
+@property (nonatomic, strong) UIColor *page;
+@property (nonatomic, strong) UIColor *white;
+@property (nonatomic, strong) UIColor *black01;
+@property (nonatomic, strong) UIColor *black02;
+@property (nonatomic, strong) UIColor *black03;
+@property (nonatomic, strong) UIColor *red;
 @end
 
 NS_ASSUME_NONNULL_END

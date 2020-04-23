@@ -18,7 +18,7 @@
         return;
     }
     MJBlockPicker colorPicker = ^(){
-        self.barTintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_barTintColor.colorName];;
+        self.barTintColor = [MJColor mj_appearanceColorWithName:mj_barTintColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

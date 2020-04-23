@@ -8,7 +8,7 @@
 
 #import "MJAppearanceImage.h"
 #import "UIImage+MJAppearance.h"
-#import "MJTheme.h"
+#import "MJAppearanceManager.h"
 
 @implementation MJAppearanceImage
 
@@ -24,7 +24,7 @@
     if (!originImageName) {
         return nil;
     }
-    NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJTheme sharedInstance].currentThemePicSuffix];
+    NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJAppearanceManager sharedInstance].currentThemePicSuffix];
     
     UIImage *newImage = [UIImage imageNamed:realImageName];
     newImage.imageName = originImageName;
@@ -35,7 +35,7 @@
     if (!originImageName) {
         return nil;
     }
-    NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJTheme sharedInstance].currentThemePicSuffix];
+    NSString *realImageName = [NSString stringWithFormat:@"%@%@",originImageName,  [MJAppearanceManager sharedInstance].currentThemePicSuffix];
     UIImage *newImage = [[UIImage  alloc]initWithContentsOfFile:realImageName];
     newImage.imageName = originImageName;
     return newImage;

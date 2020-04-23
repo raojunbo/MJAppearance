@@ -13,7 +13,7 @@
 #import "UIColor+MJAppearance.h"
 #import "MJAppearanceColor.h"
 #import "MJAppearanceImage.h"
-#import "MJTheme.h"
+#import "MJAppearanceManager.h"
 
 @interface UIImageView()
 @property (nonatomic, strong) CALayer *darkLayer;
@@ -33,7 +33,7 @@
     }
     self.tintColor = mj_tintColor;
     MJBlockPicker colorPicker = ^(){
-        self.tintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_tintColor.colorName];;
+        self.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -61,7 +61,7 @@
     objc_setAssociatedObject(self,@selector(setMj_netImageSupportDark:), @(mj_netImageSupportDark), OBJC_ASSOCIATION_ASSIGN);
     MJBlockPicker colorPicker = ^(){
         if (mj_netImageSupportDark) {
-            if([MJTheme sharedInstance].darkMode){
+            if([MJAppearanceManager sharedInstance].currentMode == MJAppearanceModeDark){
                 [self.layer addSublayer:self.darkLayer];
             }else{
                 [self.darkLayer removeFromSuperlayer];

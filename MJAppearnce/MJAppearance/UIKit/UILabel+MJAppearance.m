@@ -20,7 +20,7 @@
     }
     self.textColor = mj_textColor;
     MJBlockPicker colorPicker = ^(){
-        self.textColor = [MJAppearanceColor mj_appearanceColorWithName:mj_textColor.colorName];
+        self.textColor = [MJColor mj_appearanceColorWithName:mj_textColor.colorName];
     };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
@@ -35,7 +35,7 @@
     }
     self.shadowColor = mj_shadowColor;
     MJBlockPicker colorPicker = ^(){
-        self.shadowColor = [MJAppearanceColor mj_appearanceColorWithName:mj_shadowColor.colorName];
+        self.shadowColor = [MJColor mj_appearanceColorWithName:mj_shadowColor.colorName];
     };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
@@ -50,7 +50,7 @@
     }
     self.highlightedTextColor = mj_highlightedTextColor;
     MJBlockPicker colorPicker = ^(){
-        self.highlightedTextColor = [MJAppearanceColor mj_appearanceColorWithName:mj_highlightedTextColor.colorName];
+        self.highlightedTextColor = [MJColor mj_appearanceColorWithName:mj_highlightedTextColor.colorName];
     };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }

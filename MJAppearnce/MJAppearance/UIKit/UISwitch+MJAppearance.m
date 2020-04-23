@@ -19,7 +19,7 @@
     }
     self.tintColor = mj_tintColor;
     MJBlockPicker colorPicker = ^(){
-        self.tintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_tintColor.colorName];
+        self.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -28,9 +28,9 @@
     if (mj_thumbTintColor) {
         return;
     }
-    self.thumbTintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_thumbTintColor.colorName];
+    self.thumbTintColor = [MJColor mj_appearanceColorWithName:mj_thumbTintColor.colorName];
     MJBlockPicker colorPicker = ^(){
-           self.tintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_thumbTintColor.colorName];
+           self.tintColor = [MJColor mj_appearanceColorWithName:mj_thumbTintColor.colorName];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

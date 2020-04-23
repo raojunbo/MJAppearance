@@ -21,7 +21,7 @@
     }
     self.mj_trackTintColorPicker = mj_trackTintColorPicker;
     MJBlockPicker colorPicker = ^(){
-              self.tintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_trackTintColorPicker.colorName];
+              self.tintColor = [MJColor mj_appearanceColorWithName:mj_trackTintColorPicker.colorName];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -32,7 +32,7 @@
     }
     self.mj_progressTintColorPicker = mj_progressTintColorPicker;
     MJBlockPicker colorPicker = ^(){
-        self.tintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_progressTintColorPicker.colorName];
+        self.tintColor = [MJColor mj_appearanceColorWithName:mj_progressTintColorPicker.colorName];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

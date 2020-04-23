@@ -11,7 +11,7 @@
 #import "NSObject+MJAppearance.h"
 #import "UIColor+MJAppearance.h"
 #import "UIImage+MJAppearance.h"
-#import "MJTheme.h"
+#import "MJAppearanceManager.h"
 #import "MJAppearanceColor.h"
 #import "MJAppearanceImage.h"
 
@@ -23,7 +23,7 @@
     }
     self.tintColor = mj_tintColor;
     MJBlockPicker colorPicker = ^(){
-           self.tintColor = [MJAppearanceColor mj_appearanceColorWithName:mj_tintColor.colorName];
+           self.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];
           };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
@@ -35,7 +35,7 @@
 - (void)mj_setTitleColor:(UIColor *)color forState:(UIControlState)state {
     [self setTitleColor:color forState:state];
     MJBlockPicker colorPicker = ^(){
-        UIColor *newColor = [MJAppearanceColor mj_appearanceColorWithName:color.colorName];
+        UIColor *newColor = [MJColor mj_appearanceColorWithName:color.colorName];
         [self mj_setTitleColor:newColor forState:state];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];

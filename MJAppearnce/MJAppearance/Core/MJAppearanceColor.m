@@ -7,16 +7,16 @@
 //
 
 #import "MJAppearanceColor.h"
-#import "MJTheme.h"
-#import "MJAppearanceColorTable.h"
+#import "MJAppearanceManager.h"
 
-@interface MJAppearanceColorHandler : NSObject
-@property (nonatomic, strong) NSDictionary *colorsTable;
+@interface MJAppearanceColor()
+@property (nonatomic, strong) NSDictionary *colorConfigures;
 @end
-@implementation MJAppearanceColorHandler
+
+@implementation MJAppearanceColor
 
 + (instancetype)sharedInstance {
-    static MJAppearanceColorHandler *instance;
+    static MJAppearanceColor *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc]init];
@@ -27,17 +27,20 @@
 
 - (instancetype)init {
     if(self = [super init]){
-         _colorsTable = [MJAppearanceColorTable colorConfigures];
+        [self loadColorConfigures];
     }
     return self;
 }
 
 - (UIColor *)colorWithName:(NSString *)colorName {
-    NSDictionary *colorDict = [self.colorsTable objectForKey:colorName];
+    NSDictionary *colorDict = [self.colorConfigures objectForKey:colorName];
     if (!colorDict) {
         return nil;//颜色配置不存在
     }
-    NSString *hexColorStr = [colorDict objectForKey:[MJTheme sharedInstance].currentThemeIdentifier];
+    NSString *hexColorStr = [colorDict objectForKey:[MJAppearanceManager sharedInstance].currentAppearanceColorKey];
+    if (hexColorStr == nil) {
+      hexColorStr = [colorDict objectForKey:MJAppearanceManagerColorLightKey];
+    }
     UIColor *newColor = [self.class mjlw_colorFromHexString:hexColorStr alpha:1];
     newColor.colorName = colorName;
     return newColor;
@@ -55,53 +58,60 @@
     return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha];
 }
 
-@end
-
-
-@class MJAppearanceColorHandler;
-@interface MJAppearanceColor()
-@end
-
-@implementation MJAppearanceColor
-
-//只配置颜色，不做代码修改
-
-+ (UIColor *)mj_appearanceColorWithName:(NSString *)appearanceColorName {
-    if (!appearanceColorName) {
-        return nil;
-    }
-    UIColor *colorValue =  [[MJAppearanceColorHandler sharedInstance] colorWithName:appearanceColorName];
-    colorValue.colorName = appearanceColorName;
-    return colorValue;
+- (UIColor *)mj_appearanceColorWithName:(NSString *)appearanceColorName {
+    return [self colorWithName:appearanceColorName];
 }
 
-//+ (UIColor *)Mojiblue {
-//    return [self mj_appearanceColorWithName:@"Mojiblue"];
-//}
-//
-//+ (UIColor *)Mojiblue2 {
-//    return [self mj_appearanceColorWithName:@"Mojiblue"];
-//}
-//
-//+ (UIColor *)page {
-//    return  [self mj_appearanceColorWithName:@"page"];;
-//}
-//
-//+ (UIColor*)white {
-//    return [self mj_appearanceColorWithName:@"white"];
-//}
-//
-//+ (UIColor *)black01 {
-//    return [self mj_appearanceColorWithName:@"black01"];
-//}
-//
-//+ (UIColor *)black02 {
-//    return [self mj_appearanceColorWithName:@"black02"];
-//}
-//
-//+ (UIColor *)black03 {
-//    return [self mj_appearanceColorWithName:@"black03"];
-//}
+- (void)loadColorConfigures {
+    self.colorConfigures = @{
+        @"Mojiblue":@{
+                MJAppearanceManagerColorLightKey:@"#4294EA",MJAppearanceManagerColorDarkKey:@"#0576E6"
+        },
+        @"page":@{
+                MJAppearanceManagerColorLightKey:@"#EEF1F4",MJAppearanceManagerColorDarkKey:@"#1A1A1A"
+        },
+        @"white":@{
+                MJAppearanceManagerColorLightKey:@"#FFFFFF",MJAppearanceManagerColorDarkKey:@"#2B2B2D"
+        },
+        @"black01":@{
+                MJAppearanceManagerColorLightKey:@"#212223",MJAppearanceManagerColorDarkKey:@"#DDDDDF"
+        },
+        @"black02":@{
+                MJAppearanceManagerColorLightKey:@"#666666",MJAppearanceManagerColorDarkKey:@"#8E8E92"
+        },
+        @"black03":@{
+                MJAppearanceManagerColorLightKey:@"#999999",MJAppearanceManagerColorDarkKey:@"#616161"
+        },
+    };
+}
+
+- (UIColor *)Mojiblue {
+    return [self mj_appearanceColorWithName:NSStringFromSelector(_cmd)];
+}
+
+- (UIColor *)page {
+      return [self mj_appearanceColorWithName:NSStringFromSelector(_cmd)];
+}
+
+- (UIColor *)white {
+     return [self mj_appearanceColorWithName:NSStringFromSelector(_cmd)];
+}
+
+- (UIColor *)black01 {
+     return [self mj_appearanceColorWithName:NSStringFromSelector(_cmd)];
+}
+
+- (UIColor *)black02 {
+     return [self mj_appearanceColorWithName:NSStringFromSelector(_cmd)];
+}
+
+- (UIColor *)black03 {
+     return [self mj_appearanceColorWithName:NSStringFromSelector(_cmd)];
+}
+
+- (UIColor *)red {
+     return [self mj_appearanceColorWithName:NSStringFromSelector(_cmd)];
+}
 
 @end
 

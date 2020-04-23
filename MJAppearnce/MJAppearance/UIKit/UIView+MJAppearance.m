@@ -11,7 +11,7 @@
 #import "NSObject+MJAppearance.h"
 #import "MJAppearanceColor.h"
 #import "MJAppearanceImage.h"
-#import "MJTheme.h"
+#import "MJAppearanceManager.h"
 //#import "UIColor+MJAppearance.h"
 //#import "UIImage+MJAppearance.h"
 
@@ -36,7 +36,7 @@
     }
     self.backgroundColor = mj_backgroundColor;
     MJBlockPicker colorPicker = ^(){
-        self.backgroundColor = [MJAppearanceColor mj_appearanceColorWithName:mj_backgroundColor.colorName];
+        self.backgroundColor = [MJColor mj_appearanceColorWithName:mj_backgroundColor.colorName];
     };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }

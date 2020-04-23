@@ -69,7 +69,7 @@
 - (void)testBindColorToView {
     //普通view
     self.normaleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
-    self.normaleView.mj_backgroundColor = MJColorWithName(Mojiblue);
+    self.normaleView.mj_backgroundColor = MJColor.Mojiblue;
     [self.view addSubview:self.normaleView];
     self.normaleView.top = self.switchView.bottom;
 }
@@ -78,8 +78,8 @@
     //label
     self.label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
     self.label.text = @"我是文本";
-    self.label.mj_textColor = MJColorWithName(Mojiblue);
-    self.label.mj_backgroundColor = MJColorWithName(page);
+    self.label.mj_textColor = MJColor.Mojiblue;
+    self.label.mj_backgroundColor = MJColor.page;
     [self.view addSubview:self.label];
     self.label.top = self.normaleView.bottom;
 }
@@ -89,8 +89,8 @@
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
     self.button.frame = CGRectMake(0, 0, 50, 50);
     [self.button setTitle:@"我是button" forState:UIControlStateNormal];
-    [self.button mj_setTitleColor:MJColorWithName(Mojiblue) forState:UIControlStateNormal];
-    self.button.mj_backgroundColor = MJColorWithName(page);
+    [self.button mj_setTitleColor:MJColor.Mojiblue forState:UIControlStateNormal];
+    self.button.mj_backgroundColor = MJColor.page;
     [self.view addSubview:self.button];
     self.button.top = self.label.bottom;
 
@@ -114,14 +114,14 @@
 - (void)testBindImageView {
     //image
     self.imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50 )];
-    self.imageView2.mj_backgroundColor = MJColorWithName(page);
+    self.imageView2.mj_backgroundColor = MJColor.page;
     self.imageView2.mj_image = [MJAppearanceImage mj_imageWithName:@"cry"];
     [self.view addSubview:self.imageView2];
     self.imageView2.top = self.button.bottom;
 
     //从assets读取
     self.imageView3 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50 )];
-    self.imageView3.mj_backgroundColor = MJColorWithName(page);
+    self.imageView3.mj_backgroundColor = MJColor.page;
     self.imageView3.mj_image = [MJAppearanceImage mj_imageWithName:@"cry"];
     [self.view addSubview:self.imageView3];
     self.imageView3.top = self.imageView2.top;
@@ -151,21 +151,20 @@
     self.imageView6.layer.masksToBounds = YES;
     self.imageView6.layer.cornerRadius = 20;
     [self.imageView6 sd_setImageWithURL:[NSURL URLWithString:@"https://www.google.com/logos/doodles/2020/thank-you-teachers-and-childcare-workers-6753651837108762.3-law.gif"]];
-    self.imageView6.mj_backgroundColor = MJColorWithName(Mojiblue);
+    self.imageView6.mj_backgroundColor = MJColor.Mojiblue;
     [self.view addSubview:self.imageView6];
     self.imageView6.top = self.imageView2.top;
     self.imageView6.left = self.imageView5.right + 10;
     self.imageView6.mj_netImageSupportDark = YES;
-    
-    self.navigationController.navigationBar.mj_barTintColor = MJColorWithName(Mojiblue);
-    
+
+    self.navigationController.navigationBar.mj_barTintColor = MJColor.red;
 }
 
 - (void)switchTheme {
     if(self.switchView.on){
-        [[MJTheme sharedInstance] switchToDark];
+        [MJAppearanceManager sharedInstance].currentMode = MJAppearanceModeLight;
     }else{
-        [[MJTheme sharedInstance] switchToNormal];
+        [MJAppearanceManager sharedInstance].currentMode = MJAppearanceModeDark;
     }
 }
 

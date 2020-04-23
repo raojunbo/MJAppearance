@@ -8,7 +8,7 @@
 
 #import "NSObject+MJAppearance.h"
 #import <objc/runtime.h>
-#import "MJTheme.h"
+#import "MJAppearanceManager.h"
 
 static NSHashTable *objectWeakHashTable = NULL;
 
@@ -17,7 +17,7 @@ static NSHashTable *objectWeakHashTable = NULL;
 @dynamic objectWeakHashTable;
 
 + (void)load {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateAppearance:) name:KAppThemeChangeNotifcation object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateAppearance:) name:KAppMJAppearanceChangeNotifcation object:nil];
 }
 
 - (NSMutableDictionary<NSString *, id> *)appearanceUpdates {
@@ -58,7 +58,7 @@ static NSHashTable *objectWeakHashTable = NULL;
 + (void)updateAppearance:(NSNotification *)notification {
     NSString *object = notification.object;
     if ([object isKindOfClass:[NSString class]] && object.length > 0 ) {
-        BOOL sucess = true;//[[MJTheme sharedInstance] switchToTheme:object];
+        BOOL sucess = true;//[[MJAppearanceManager sharedInstance] switchToTheme:object];
         if(sucess){
             NSArray *viewsArray = [self class].objectWeakHashTable.allObjects;
             [viewsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

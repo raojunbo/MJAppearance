@@ -10,7 +10,7 @@
 #import "NSObject+MJAppearance.h"
 #import "MJAppearanceColor.h"
 #import "MJAppearanceImage.h"
-#import "MJTheme.h"
+#import "MJAppearanceManager.h"
 
 @implementation UITextField (MJAppearance)
 @dynamic mj_textColor;
@@ -20,7 +20,7 @@
     }
     self.textColor = mj_textColor;
     MJBlockPicker colorPicker = ^(){
-        self.textColor = [MJAppearanceColor mj_appearanceColorWithName:mj_textColor.colorName];
+        self.textColor = [MJColor mj_appearanceColorWithName:mj_textColor.colorName];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
