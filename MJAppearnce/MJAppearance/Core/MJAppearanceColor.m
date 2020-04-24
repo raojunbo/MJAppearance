@@ -43,31 +43,6 @@ static NSString * const MJColorDarkKey = @"DARK";
     return self;
 }
 
-//- (UIColor *)colorWithLight:(NSUInteger)lightColor darkNumber:(NSUInteger)darkColor colorName:(NSString *)colorName {
-// 如果是 iOS 13 及以后系统，使用系统的动态颜色。目的：以后最低版本到13之后，就可以把自定义方式删掉了
-//    if (@available(iOS 13.0, *)) {
-//        return [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-//            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark ) {
-//                [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleDark;
-//            }else{
-//                [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleLight;
-//            }
-//
-//            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-//                return  [self color:darkColor WithName:colorName];
-//            }
-//            return [self color:lightColor WithName:colorName];;
-//        }];
-//    }
-
-// iOS13 以下使用自定义枚举判断，最低版本升级到13之后可以直接删
-//    if ([MJAppearanceManager sharedInstance].currentInterfaceStyle == MJUserInterfaceStyleDark) {
-//        return [self color:darkColor WithName:colorName];
-//    }else{
-//        return [self color:lightColor WithName:colorName];
-//    }
-//}
-
 - (void)loadColorConfigures {
     self.colorsTableConfigure =  @{
         @"Mojiblue":@{MJColorLightKey:@(0x4294EA),@"DARK":@(0x0576E6)},
@@ -107,17 +82,9 @@ static NSString * const MJColorDarkKey = @"DARK";
 - (UIColor *)appearanceColorWithColorName:(NSString *)colorName {
     NSDictionary *colorsPairs = [self.colorsTableConfigure objectForKey:colorName];
     
+    //iOS13 系统自带
     if (@available(iOS 13.0, *)) {
         return [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-             
-            //怎么知道统一的 修改 模式
-//            if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark ) {
-//                [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleDark;
-//            }else{
-//                [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleLight;
-//            }
-            
-            //先是设置
             int rgbValue = [[colorsPairs objectForKey:MJColorLightKey] intValue];
             if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
                 rgbValue = [[colorsPairs objectForKey:MJColorDarkKey] intValue];
@@ -129,6 +96,7 @@ static NSString * const MJColorDarkKey = @"DARK";
         }];
     }
     
+    //iOS13以下
     int rgbValue = [[colorsPairs objectForKey:MJColorLightKey] intValue];
     if ([MJAppearanceManager sharedInstance].currentInterfaceStyle == MJUserInterfaceStyleDark) {
         rgbValue = [[colorsPairs objectForKey:MJColorDarkKey] intValue];

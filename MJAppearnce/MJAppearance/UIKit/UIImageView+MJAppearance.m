@@ -50,7 +50,7 @@
     MJBlockPicker colorPicker = ^(){
         self.image = [MJAppearanceImage mj_imageWithName:mj_image.imageName];;
     };
-    [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
+    [self.appearanceImageWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
 
 - (UIImage *)mj_image {
