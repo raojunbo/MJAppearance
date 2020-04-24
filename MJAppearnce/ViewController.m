@@ -56,9 +56,9 @@
     self.toSecondButton.left = self.switchView.right + 10;
     
     [self testBindColorToView];
-    [self testBindLabel];
-    [self testBindButton];
-    [self testBindImageView];
+//    [self testBindLabel];
+//    [self testBindButton];
+//    [self testBindImageView];
 }
 
 - (void)toSecondButtonButtonClick {
@@ -69,9 +69,10 @@
 - (void)testBindColorToView {
     //普通view
     self.normaleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
-    self.normaleView.mj_backgroundColor = MJColor.Mojiblue;
+    self.normaleView.mj_backgroundColor = MJColor.page;
     [self.view addSubview:self.normaleView];
     self.normaleView.top = self.switchView.bottom;
+   
 }
 
 - (void)testBindLabel {
@@ -157,14 +158,13 @@
     self.imageView6.left = self.imageView5.right + 10;
     self.imageView6.mj_netImageSupportDark = YES;
 
-    self.navigationController.navigationBar.mj_barTintColor = MJColor.red;
 }
 
 - (void)switchTheme {
     if(self.switchView.on){
-        [MJAppearanceManager sharedInstance].currentMode = MJAppearanceModeLight;
+        [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleLight;
     }else{
-        [MJAppearanceManager sharedInstance].currentMode = MJAppearanceModeDark;
+        [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleDark;
     }
 }
 

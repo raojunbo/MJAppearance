@@ -11,13 +11,13 @@
 #import "MJAppearanceColor.h"
 
 @implementation UISwitch (MJAppearance)
-@dynamic mj_tintColor;
+@dynamic mj_onTintColor;
 @dynamic mj_thumbTintColor;
-- (void)setMj_tintColor:(UIColor *)mj_tintColor {
+- (void)setMj_onTintColor:(UIColor *)mj_tintColor {
     if (mj_tintColor) {
         return;
     }
-    self.tintColor = mj_tintColor;
+    self.onTintColor = mj_tintColor;
     MJBlockPicker colorPicker = ^(){
         self.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];
     };

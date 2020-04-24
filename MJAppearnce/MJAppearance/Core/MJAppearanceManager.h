@@ -9,23 +9,18 @@
 #import <Foundation/Foundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
-
-static NSString * const MJAppearanceManagerColorLightKey = @"Light";
-static NSString * const MJAppearanceManagerColorDarkKey = @"DARK";
 static NSString * const KAppMJAppearanceChangeNotifcation = @"KAppMJAppearanceChangeNotifcation";
 
-typedef NS_ENUM(NSInteger, MJAppearanceMode) {
-    MJAppearanceModeLight,
-    MJAppearanceModeDark
+typedef NS_ENUM(NSInteger, MJUserInterfaceStyle) {
+    MJUserInterfaceStyleLight,
+    MJUserInterfaceStyleDark
 };
 
 @interface MJAppearanceManager : NSObject
 
-@property (nonatomic, strong,readonly) NSString *currentAppearanceColorKey;
+@property (nonatomic, strong,readonly) NSString *darkInterfaceStylePicSuffix;
 
-@property (nonatomic, strong,readonly) NSString *currentThemePicSuffix;
-
-@property (nonatomic, assign) MJAppearanceMode currentMode;
+@property (nonatomic, assign) MJUserInterfaceStyle currentInterfaceStyle;
 
 + (instancetype)sharedInstance;
 

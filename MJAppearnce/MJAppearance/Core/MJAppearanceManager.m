@@ -10,7 +10,8 @@
 
 NSString * const MJAppearanceManagerColorLightKeySuffix = @"";
 NSString * const MJAppearanceManagerColorDarkKeyPicSuffix = @"_dark";
-NSString * const MJAppearanceManagerModeKey = @"MJAppearanceManagerModeKey";
+
+NSString * const MJAppearanceManagerUserInterfaceStyleKey = @"MJAppearanceManagerUserInterfaceStyleKey";
 @interface MJAppearanceManager()
 @end
 
@@ -28,54 +29,48 @@ NSString * const MJAppearanceManagerModeKey = @"MJAppearanceManagerModeKey";
 
 - (instancetype)init {
     if (self  = [super init]) {
-        _currentMode = [self localMode];
+        _currentInterfaceStyle = [self localMode];
     }
     return self;
 }
 
-- (MJAppearanceMode)localMode {
+- (MJUserInterfaceStyle)localMode {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    return [[userDefaults valueForKey:MJAppearanceManagerModeKey] intValue];;
+    NSNumber *interfaceStyle =  [userDefaults valueForKey:MJAppearanceManagerUserInterfaceStyleKey];
+    if(interfaceStyle == nil){
+        interfaceStyle = @0;
+    }
+    return (MJUserInterfaceStyle)[interfaceStyle intValue];
 }
 
-- (void)saveMode:(MJAppearanceMode)mode {
+- (void)saveMode:(MJUserInterfaceStyle)mode {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:@(mode) forKey:MJAppearanceManagerModeKey];
+    [userDefaults setObject:@(mode) forKey:MJAppearanceManagerUserInterfaceStyleKey];
 }
 
-- (void)setCurrentMode:(MJAppearanceMode)currentMode {
-    if (_currentMode == currentMode) {
+- (void)setCurrentInterfaceStyle:(MJUserInterfaceStyle)currentInterfaceStyle {
+    if (_currentInterfaceStyle == currentInterfaceStyle) {
         return;
     }
-    _currentMode = currentMode;
-    [self saveMode:currentMode];
-    switch (currentMode) {
-        case MJAppearanceModeLight:{
-            [[NSNotificationCenter defaultCenter] postNotificationName:KAppMJAppearanceChangeNotifcation object:MJAppearanceManagerColorLightKey];
+    _currentInterfaceStyle = currentInterfaceStyle;
+    [self saveMode:currentInterfaceStyle];
+    switch (currentInterfaceStyle) {
+        case MJUserInterfaceStyleLight:{
+            [[NSNotificationCenter defaultCenter] postNotificationName:KAppMJAppearanceChangeNotifcation object:nil];
         }
-            
             break;
-        case MJAppearanceModeDark:{
-            [[NSNotificationCenter defaultCenter] postNotificationName:KAppMJAppearanceChangeNotifcation object:MJAppearanceManagerColorDarkKey];
+        case MJUserInterfaceStyleDark:{
+            [[NSNotificationCenter defaultCenter] postNotificationName:KAppMJAppearanceChangeNotifcation object:nil];
         }
             
             break;
         default:
             break;
     }
-    
 }
 
-- (NSString *)currentAppearanceColorKey {
-    if(self.currentMode == MJAppearanceModeDark){
-        return MJAppearanceManagerColorDarkKey;
-    }else{
-        return MJAppearanceManagerColorLightKey;
-    }
-}
-
-- (NSString *)currentThemePicSuffix {
-    if(self.currentMode == MJAppearanceModeDark){
+- (NSString *)darkInterfaceStylePicSuffix {
+    if(self.currentInterfaceStyle == MJUserInterfaceStyleDark){
         return MJAppearanceManagerColorDarkKeyPicSuffix;
     }else{
         return MJAppearanceManagerColorLightKeySuffix;

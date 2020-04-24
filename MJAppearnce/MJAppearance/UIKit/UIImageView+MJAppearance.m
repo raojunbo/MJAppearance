@@ -61,7 +61,7 @@
     objc_setAssociatedObject(self,@selector(setMj_netImageSupportDark:), @(mj_netImageSupportDark), OBJC_ASSOCIATION_ASSIGN);
     MJBlockPicker colorPicker = ^(){
         if (mj_netImageSupportDark) {
-            if([MJAppearanceManager sharedInstance].currentMode == MJAppearanceModeDark){
+            if([MJAppearanceManager sharedInstance].currentInterfaceStyle == MJUserInterfaceStyleDark){
                 [self.layer addSublayer:self.darkLayer];
             }else{
                 [self.darkLayer removeFromSuperlayer];

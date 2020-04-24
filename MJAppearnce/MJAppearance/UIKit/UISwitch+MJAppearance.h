@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UISwitch (MJAppearance)
 
-@property (nonatomic, strong) UIColor *mj_tintColor;
+@property (nonatomic, strong) UIColor *mj_onTintColor;
 @property (nonatomic, strong) UIColor *mj_thumbTintColor;
 
 @end

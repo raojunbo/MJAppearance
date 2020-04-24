@@ -56,21 +56,27 @@ static NSHashTable *objectWeakHashTable = NULL;
 }
 
 + (void)updateAppearance:(NSNotification *)notification {
-    NSString *object = notification.object;
-    if ([object isKindOfClass:[NSString class]] && object.length > 0 ) {
-        BOOL sucess = true;//[[MJAppearanceManager sharedInstance] switchToTheme:object];
-        if(sucess){
-            NSArray *viewsArray = [self class].objectWeakHashTable.allObjects;
-            [viewsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                if([obj isKindOfClass:[UIView class]]){
-                    UIView *view = obj;
+    BOOL sucess = true;
+    if(sucess){
+        NSArray *viewsArray = [self class].objectWeakHashTable.allObjects;
+        [viewsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if([obj isKindOfClass:[UIView class]]){
+                UIView *view = obj;
+                //iOS 12 系统
+                if (@available(iOS 12.0, *)) {
+                    if(view.traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight){
+                        
+                    }else{
+                        
+                    }
+                } else {
                     BOOL needUpdate = [view respondsToSelector:@selector(mj_updateAppearanceColor)] && (view.appearanceWorks.allKeys.count > 0);
                     if (needUpdate) {
                         [view mj_updateAppearanceColor];
                     }
                 }
-            }];
-        }
+            }
+        }];
     }
 }
 

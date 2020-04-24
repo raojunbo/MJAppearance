@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "MJAppearance.h"
 @interface AppDelegate ()
 
 @end
@@ -20,16 +21,28 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     UIColor *tintColor = [UIColor colorWithRed:29.0/255.0
-                                           green:173.0/255.0
-                                            blue:234.0/255.0
-                                           alpha:1.0];
+                                         green:173.0/255.0
+                                          blue:234.0/255.0
+                                         alpha:1.0];
     [self.window setTintColor:tintColor];
     ViewController *rootVC = [[ViewController alloc]init];
     self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:rootVC];
-    
     [self.window makeKeyAndVisible];
-      
+    
     return YES;
 }
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    if (@available(iOS 12.0, *)) {
+        if(self.window.traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+            [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleLight;
+        }else{
+            [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleDark;
+        }
+    } else {
+        //nothing to do
+    }
+}
+
 
 @end

@@ -19,6 +19,9 @@
 #import "UILabel+MJAppearance.h"
 #import "UIButton+MJAppearance.h"
 #import "UINavigationBar+MJAppearance.h"
-
+#import "UISwitch+MJAppearance.h"
+#import "UIBarButtonItem+MJAppearance.h"
+#import "UIProgressView+MJAppearance.h"
+#import "UISlider+MJAppearance.h"
 
 #endif /* MJAppearance_h */
