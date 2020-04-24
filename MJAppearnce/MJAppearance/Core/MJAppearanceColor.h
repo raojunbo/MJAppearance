@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define MJColor [MJAppearanceColor sharedInstance]
 
 + (instancetype)sharedInstance;
+
 - (UIColor *)mj_appearanceColorWithName:(NSString *)colorName;
 
 //主色
