@@ -48,18 +48,18 @@ static NSString * const MJColorDarkKey = @"DARK";
  **/
 - (void)loadColorConfigures {
     self.colorsTableConfigure =  @{
-        @"Mojiblue":@{MJColorLightKey:@(0x4294EA),@"DARK":@(0x0576E6)},
-        @"page":@{MJColorLightKey:@(0xEEF1F4),@"DARK":@(0x1A1A1A)},
-        @"white":@{MJColorLightKey:@(0xFFFFFF),@"DARK":@(0x2B2B2D)},
-        @"black01":@{MJColorLightKey:@(0x212223),@"DARK":@(0xDDDDDF)},
-        @"black02":@{MJColorLightKey:@(0x666666),@"DARK":@(0x8E8E92)},
-        @"black03":@{MJColorLightKey:@(0x999999),@"DARK":@(0x616161)},
-        @"lightgrey":@{MJColorLightKey:@(0xF9F9F9),@"DARK":@(0x353535)},
-        @"black":@{MJColorLightKey:@(0x000000),@"DARK":@(0xDDDDDF)},
-        @"black05":@{MJColorLightKey:@(0xC8C8C8),@"DARK":@(0x555555)},
-        @"black04":@{MJColorLightKey:@(0xADADAD),@"DARK":@(0x616161)},
-        @"red02":@{MJColorLightKey:@(0xf24949),@"DARK":@(0xDB3533)},
-        @"yellow02":@{MJColorLightKey:@(0xFACE15),@"DARK":@(0xFEC500)},
+        @"Mojiblue":@{MJColorLightKey:@(0x4294EA),MJColorDarkKey:@(0x0576E6)},
+        @"page":@{MJColorLightKey:@(0xEEF1F4),MJColorDarkKey:@(0x1A1A1A)},
+        @"white":@{MJColorLightKey:@(0xFFFFFF),MJColorDarkKey:@(0x2B2B2D)},
+        @"black01":@{MJColorLightKey:@(0x212223),MJColorDarkKey:@(0xDDDDDF)},
+        @"black02":@{MJColorLightKey:@(0x666666),MJColorDarkKey:@(0x8E8E92)},
+        @"black03":@{MJColorLightKey:@(0x999999),MJColorDarkKey:@(0x616161)},
+        @"lightgrey":@{MJColorLightKey:@(0xF9F9F9),MJColorDarkKey:@(0x353535)},
+        @"black":@{MJColorLightKey:@(0x000000),MJColorDarkKey:@(0xDDDDDF)},
+        @"black05":@{MJColorLightKey:@(0xC8C8C8),MJColorDarkKey:@(0x555555)},
+        @"black04":@{MJColorLightKey:@(0xADADAD),MJColorDarkKey:@(0x616161)},
+        @"red02":@{MJColorLightKey:@(0xf24949),MJColorDarkKey:@(0xDB3533)},
+        @"yellow02":@{MJColorLightKey:@(0xFACE15),MJColorDarkKey:@(0xFEC500)},
     };
 }
 

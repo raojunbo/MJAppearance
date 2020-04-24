@@ -47,7 +47,7 @@
         UIImage *newImage = [MJAppearanceImage mj_imageWithName:image.imageName];
         [self mj_setBackgroundImage:newImage forState:state];
        };
-    [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
+    [self.appearanceImageWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
 
 - (void)mj_setImage:(UIImage *)image forState:(UIControlState)state {
@@ -56,7 +56,7 @@
         UIImage *newImage = [MJAppearanceImage mj_imageWithName:image.imageName];
         [self mj_setImage:newImage forState:state];
     };
-    [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
+    [self.appearanceImageWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
 
 @end
