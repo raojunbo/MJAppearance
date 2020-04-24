@@ -31,18 +31,4 @@
     
     return YES;
 }
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    if (@available(iOS 12.0, *)) {
-        if(self.window.traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
-            [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleLight;
-        }else{
-            [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleDark;
-        }
-    } else {
-        //nothing to do
-    }
-}
-
-
 @end

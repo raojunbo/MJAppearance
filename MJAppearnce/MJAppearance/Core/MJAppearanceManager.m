@@ -29,9 +29,23 @@ NSString * const MJAppearanceManagerUserInterfaceStyleKey = @"MJAppearanceManage
 
 - (instancetype)init {
     if (self  = [super init]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(systemInterfaceStyleChange) name:UIApplicationDidBecomeActiveNotification object:nil];
         _currentInterfaceStyle = [self localMode];
     }
     return self;
+}
+
+- (void)systemInterfaceStyleChange {
+    if (@available(iOS 13.0, *)) {
+        UIWindow *window =  [UIApplication sharedApplication].keyWindow;
+        if(window.traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+            [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleLight;
+        }else{
+            [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleDark;
+        }
+    } else {
+        //nothing to do
+    }
 }
 
 - (MJUserInterfaceStyle)localMode {

@@ -60,6 +60,8 @@
     [self testBindLabel];
     [self testBindButton];
     [self testBindImageView];
+    
+   
 }
 
 - (void)toSecondButtonButtonClick {
