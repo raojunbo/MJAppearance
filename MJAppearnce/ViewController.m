@@ -70,27 +70,20 @@
 - (void)testBindColorToView {
     //普通view
     self.normaleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
-    self.normaleView.mj_backgroundColor = MJColor.Mojiblue;
-//    .alphaPicker(0.1,0.4);
-
-    //     MJColor.Mojiblue;
-//    MJColor.Mojiblue.alphaPicker(0.1,0.4);
-//    MJColor.Mojiblue(1,1);
+    UIColor * mojiblue =  MJColor.Mojiblue;
+    self.normaleView.mj_backgroundColor = mojiblue;
     
     [self.view addSubview:self.normaleView];
     self.normaleView.top = self.switchView.bottom;
-    
-    //1.1种，生成后加工重新生成一份；弊病：带alpha的生成两份
-    //2.2种，寻找多参数的处理情况
-    
 }
 
 - (void)testBindLabel {
     //label
     self.label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
     self.label.text = @"我是文本";
-    self.label.mj_textColor = MJColor.Mojiblue;
-    self.label.mj_backgroundColor = MJColor.page;
+    
+    UIColor *mojibluealpha =  MJColor.Mojiblue.alphaPicker(0.1,0.5);
+    self.label.mj_backgroundColor = mojibluealpha;
     [self.view addSubview:self.label];
     self.label.top = self.normaleView.bottom;
 }
@@ -101,7 +94,7 @@
     self.button.frame = CGRectMake(0, 0, 50, 50);
     [self.button setTitle:@"我是button" forState:UIControlStateNormal];
     [self.button mj_setTitleColor:MJColor.Mojiblue forState:UIControlStateNormal];
-    self.button.mj_backgroundColor = MJColor.page;
+    self.button.mj_backgroundColor = MJColor.page.alphaPicker(0.1,0.5);
     [self.view addSubview:self.button];
     self.button.top = self.label.bottom;
     

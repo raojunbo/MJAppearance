@@ -11,9 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef UIColor *_Nonnull(^MJColorAlphaPicker)(CGFloat lightAlpha,CGFloat darkAlpha);
+
 @interface UIColor (MJAppearance)
 @property (nonatomic, strong) NSString *colorName;
+@property (nonatomic, assign) CGFloat lightAlpha;
+@property (nonatomic, assign) CGFloat darkAlpha;
+
 @property (nonatomic, strong) MJColorAlphaPicker alphaPicker;
+
 @end
 
 NS_ASSUME_NONNULL_END

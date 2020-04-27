@@ -37,9 +37,9 @@
     self.backgroundColor = mj_backgroundColor;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.backgroundColor = [MJColor mj_appearanceColorWithName:mj_backgroundColor.colorName];
+        weakSelf.backgroundColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_backgroundColor];
     };
-    [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
+    [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
 
 - (UIColor *)mj_backgroundColor {

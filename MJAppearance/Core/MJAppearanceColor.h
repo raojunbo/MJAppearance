@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedInstance;
 
 - (UIColor *)mj_appearanceColorWithName:(NSString *)colorName;
++ (UIColor *)mj_appearanceColorWithOriginColor:(UIColor *)originColor;
++ (UIColor *)mj_appearanceColorWithOriginColor:(UIColor *)originColor lightAlpha:(CGFloat)lightAlpha darkAlpha:(CGFloat)darkAlpha;
 
 //主色
 @property (nonatomic, strong) UIColor *Mojiblue;//主题蓝
@@ -34,8 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
 //业务色
 @property (nonatomic, strong) UIColor *red02;//点赞，信息气泡
 @property (nonatomic, strong) UIColor *yellow02;//收藏
-
-
 
 @end
 
