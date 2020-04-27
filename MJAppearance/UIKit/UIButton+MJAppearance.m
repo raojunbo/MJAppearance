@@ -22,9 +22,10 @@
         return;
     }
     self.tintColor = mj_tintColor;
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-           self.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];
-          };
+        weakSelf.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];
+    };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
 
@@ -34,27 +35,30 @@
 
 - (void)mj_setTitleColor:(UIColor *)color forState:(UIControlState)state {
     [self setTitleColor:color forState:state];
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
         UIColor *newColor = [MJColor mj_appearanceColorWithName:color.colorName];
-        [self mj_setTitleColor:newColor forState:state];
+        [weakSelf mj_setTitleColor:newColor forState:state];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
 
 - (void)mj_setBackgroundImage:(UIImage *)image forState:(UIControlState)state {
     [self setBackgroundImage:image forState:state];
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
         UIImage *newImage = [MJAppearanceImage mj_imageWithName:image.imageName];
-        [self mj_setBackgroundImage:newImage forState:state];
-       };
+        [weakSelf mj_setBackgroundImage:newImage forState:state];
+    };
     [self.appearanceImageWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
 
 - (void)mj_setImage:(UIImage *)image forState:(UIControlState)state {
     [self setImage:image forState:state];
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
         UIImage *newImage = [MJAppearanceImage mj_imageWithName:image.imageName];
-        [self mj_setImage:newImage forState:state];
+        [weakSelf mj_setImage:newImage forState:state];
     };
     [self.appearanceImageWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

@@ -35,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *red02;//点赞，信息气泡
 @property (nonatomic, strong) UIColor *yellow02;//收藏
 
+
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -44,22 +44,22 @@ static NSString * const MJColorDarkKey = @"DARK";
 }
 
 /* 添加新类型颜色：1.loadColorConfigures 配置相应的LIGHT与DARK色
-                2.loadDefaultColors 根据初始读取初始值
+ 2.loadDefaultColors 根据初始读取初始值
  **/
 - (void)loadColorConfigures {
     self.colorsTableConfigure =  @{
-        @"Mojiblue":@{MJColorLightKey:@(0x4294EA),MJColorDarkKey:@(0x0576E6)},
-        @"page":@{MJColorLightKey:@(0xEEF1F4),MJColorDarkKey:@(0x1A1A1A)},
-        @"white":@{MJColorLightKey:@(0xFFFFFF),MJColorDarkKey:@(0x2B2B2D)},
-        @"black01":@{MJColorLightKey:@(0x212223),MJColorDarkKey:@(0xDDDDDF)},
-        @"black02":@{MJColorLightKey:@(0x666666),MJColorDarkKey:@(0x8E8E92)},
-        @"black03":@{MJColorLightKey:@(0x999999),MJColorDarkKey:@(0x616161)},
-        @"lightgrey":@{MJColorLightKey:@(0xF9F9F9),MJColorDarkKey:@(0x353535)},
-        @"black":@{MJColorLightKey:@(0x000000),MJColorDarkKey:@(0xDDDDDF)},
-        @"black05":@{MJColorLightKey:@(0xC8C8C8),MJColorDarkKey:@(0x555555)},
-        @"black04":@{MJColorLightKey:@(0xADADAD),MJColorDarkKey:@(0x616161)},
-        @"red02":@{MJColorLightKey:@(0xf24949),MJColorDarkKey:@(0xDB3533)},
-        @"yellow02":@{MJColorLightKey:@(0xFACE15),MJColorDarkKey:@(0xFEC500)},
+        @"Mojiblue":@{MJColorLightKey:@(0x4294EA),@"DARK":@(0x0576E6)},
+        @"page":@{MJColorLightKey:@(0xEEF1F4),@"DARK":@(0x1A1A1A)},
+        @"white":@{MJColorLightKey:@(0xFFFFFF),@"DARK":@(0x2B2B2D)},
+        @"black01":@{MJColorLightKey:@(0x212223),@"DARK":@(0xDDDDDF)},
+        @"black02":@{MJColorLightKey:@(0x666666),@"DARK":@(0x8E8E92)},
+        @"black03":@{MJColorLightKey:@(0x999999),@"DARK":@(0x616161)},
+        @"lightgrey":@{MJColorLightKey:@(0xF9F9F9),@"DARK":@(0x353535)},
+        @"black":@{MJColorLightKey:@(0x000000),@"DARK":@(0xDDDDDF)},
+        @"black05":@{MJColorLightKey:@(0xC8C8C8),@"DARK":@(0x555555)},
+        @"black04":@{MJColorLightKey:@(0xADADAD),@"DARK":@(0x616161)},
+        @"red02":@{MJColorLightKey:@(0xf24949),@"DARK":@(0xDB3533)},
+        @"yellow02":@{MJColorLightKey:@(0xFACE15),@"DARK":@(0xFEC500)},
     };
 }
 
@@ -86,8 +86,9 @@ static NSString * const MJColorDarkKey = @"DARK";
     NSDictionary *colorsPairs = [self.colorsTableConfigure objectForKey:colorName];
     
     //如果是 iOS 13 及以后系统，使用系统的动态颜色。目的：以后最低版本到13之后，就可以把自定义方式删掉了
+    //此方法在同一个view下是不会重新调用。直接使用的最初初始化的动态颜色。
     if (@available(iOS 13.0, *)) {
-        return [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+        UIColor *dynamicColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
             int rgbValue = [[colorsPairs objectForKey:MJColorLightKey] intValue];
             if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
                 rgbValue = [[colorsPairs objectForKey:MJColorDarkKey] intValue];
@@ -97,6 +98,8 @@ static NSString * const MJColorDarkKey = @"DARK";
             
             return [self color:rgbValue WithName:colorName];
         }];
+        dynamicColor.colorName = colorName;
+        return dynamicColor;
     }
     
     //iOS13 以下使用自定义枚举判断，最低版本升级到13之后可以直接删除

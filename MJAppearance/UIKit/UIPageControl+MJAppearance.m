@@ -19,8 +19,9 @@
         return;
     }
     self.pageIndicatorTintColor = mj_pageIndicatorTintColor;
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        self.pageIndicatorTintColor = [MJColor mj_appearanceColorWithName:mj_pageIndicatorTintColor.colorName];;
+        weakSelf.pageIndicatorTintColor = [MJColor mj_appearanceColorWithName:mj_pageIndicatorTintColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -30,8 +31,9 @@
         return;
     }
     self.pageIndicatorTintColor = mj_currentPageIndicatorTintColor;
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        self.pageIndicatorTintColor = [MJColor mj_appearanceColorWithName:mj_currentPageIndicatorTintColor.colorName];;
+        weakSelf.pageIndicatorTintColor = [MJColor mj_appearanceColorWithName:mj_currentPageIndicatorTintColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

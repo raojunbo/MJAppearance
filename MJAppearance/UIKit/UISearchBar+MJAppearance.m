@@ -17,8 +17,9 @@
     if (mj_barTintColor == nil) {
         return;
     }
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        self.barTintColor = [MJColor mj_appearanceColorWithName:mj_barTintColor.colorName];;
+        weakSelf.barTintColor = [MJColor mj_appearanceColorWithName:mj_barTintColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

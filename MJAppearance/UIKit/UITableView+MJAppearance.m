@@ -21,20 +21,25 @@
         return;
     }
     self.separatorColor = mj_separatorColor;
+    
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        self.separatorColor = [MJColor mj_appearanceColorWithName:mj_separatorColor.colorName];;
+        weakSelf.separatorColor = [MJColor mj_appearanceColorWithName:mj_separatorColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
-    
 }
+
+
 
 - (void)setMj_sectionIndexColor:(UIColor *)mj_sectionIndexColor {
     if (mj_sectionIndexColor == nil) {
         return;
     }
     self.sectionIndexColor = mj_sectionIndexColor;
+    __weak typeof(self) weakSelf = self;
+    
     MJBlockPicker colorPicker = ^(){
-        self.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexColor.colorName];;
+        weakSelf.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -44,8 +49,10 @@
         return;
     }
     self.sectionIndexBackgroundColor = mj_sectionIndexBackgroundColor;
+    __weak typeof(self) weakSelf = self;
+    
     MJBlockPicker colorPicker = ^(){
-        self.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexBackgroundColor.colorName];;
+        weakSelf.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexBackgroundColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -55,8 +62,10 @@
         return;
     }
     self.sectionIndexBackgroundColor = mj_sectionIndexTrackingBackgroundColor;
+    __weak typeof(self) weakSelf = self;
+    
     MJBlockPicker colorPicker = ^(){
-        self.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexTrackingBackgroundColor.colorName];;
+        weakSelf.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexTrackingBackgroundColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

@@ -48,7 +48,7 @@
     [self.switchView addTarget:self action:@selector(switchTheme) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.switchView];
     
-   
+    
     self.tipLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 250, 50)];
     self.tipLabel.text = @"iOS13 自动根据系统黑暗,不支持手动;iOS13以下才能手动切换";
     self.tipLabel.font = [UIFont systemFontOfSize:10];
@@ -60,8 +60,6 @@
     [self testBindLabel];
     [self testBindButton];
     [self testBindImageView];
-    
-   
 }
 
 - (void)toSecondButtonButtonClick {
@@ -72,9 +70,18 @@
 - (void)testBindColorToView {
     //普通view
     self.normaleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
-    self.normaleView.mj_backgroundColor = MJColor.page;
+    self.normaleView.mj_backgroundColor = MJColor.Mojiblue
+//    .alphaPicker(0.1,0.4);
+
+    //     MJColor.Mojiblue;
+//    MJColor.Mojiblue.alphaPicker(0.1,0.4);
+//    MJColor.Mojiblue(1,1);
+    
     [self.view addSubview:self.normaleView];
     self.normaleView.top = self.switchView.bottom;
+    
+    //1.1种，生成后加工重新生成一份；弊病：带alpha的生成两份
+    //2.2种，寻找多参数的处理情况
     
 }
 
@@ -159,19 +166,18 @@
     self.imageView6.top = self.imageView2.top;
     self.imageView6.left = self.imageView5.right + 10;
     self.imageView6.mj_netImageSupportDark = YES;
-    
 }
 
 - (void)switchTheme {
     if (@available(iOS 13.0, *)) {
         UIAlertController *alertVC  = [UIAlertController alertControllerWithTitle:@"提示" message:@"iOS13不支持手动切换,请在系统里设置" preferredStyle:UIAlertControllerStyleActionSheet];
         UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-               
-           }];
+            
+        }];
         [alertVC addAction:sureAction];
         [self presentViewController:alertVC animated:YES completion:nil];
-    
-     return;
+        
+        return;
     }
     if(self.switchView.on){
         [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleLight;

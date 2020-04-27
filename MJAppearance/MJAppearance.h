@@ -12,7 +12,7 @@
 #import "MJAppearanceColor.h"
 #import "MJAppearanceImage.h"
 #import "MJAppearanceManager.h"
-
+#import "UIColor+MJAppearance.h"
 #import "NSObject+MJAppearance.h"
 #import "UIView+MJAppearance.h"
 #import "UIImageView+MJAppearance.h"

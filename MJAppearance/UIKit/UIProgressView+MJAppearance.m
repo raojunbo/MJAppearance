@@ -20,8 +20,9 @@
         return;
     }
     self.mj_trackTintColorPicker = mj_trackTintColorPicker;
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-              self.tintColor = [MJColor mj_appearanceColorWithName:mj_trackTintColorPicker.colorName];
+        weakSelf.tintColor = [MJColor mj_appearanceColorWithName:mj_trackTintColorPicker.colorName];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -31,8 +32,9 @@
         return;
     }
     self.mj_progressTintColorPicker = mj_progressTintColorPicker;
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        self.tintColor = [MJColor mj_appearanceColorWithName:mj_progressTintColorPicker.colorName];
+        weakSelf.tintColor = [MJColor mj_appearanceColorWithName:mj_progressTintColorPicker.colorName];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

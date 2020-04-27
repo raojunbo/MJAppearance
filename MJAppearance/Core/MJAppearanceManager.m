@@ -29,16 +29,20 @@ NSString * const MJAppearanceManagerUserInterfaceStyleKey = @"MJAppearanceManage
 
 - (instancetype)init {
     if (self  = [super init]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(systemInterfaceStyleChange) name:UIApplicationDidBecomeActiveNotification object:nil];
-        _currentInterfaceStyle = [self localMode];
+        _currentInterfaceStyle = [self localUserInterfaceStyle];
+        
+        //通知目的：iOS13及iOS13以下的图片的更新在进入前台时，都需要根据当前样式更新图片。
+         if (@available(iOS 13.0, *)) {
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(systemInterfaceStyleChange) name:UIApplicationDidBecomeActiveNotification object:nil];
+         }
+     
     }
     return self;
 }
 
 - (void)systemInterfaceStyleChange {
     if (@available(iOS 13.0, *)) {
-        UIWindow *window =  [UIApplication sharedApplication].keyWindow;
-        if(window.traitCollection.userInterfaceStyle == UIUserInterfaceStyleLight) {
+        if( [UITraitCollection currentTraitCollection].userInterfaceStyle == UIUserInterfaceStyleLight) {
             [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleLight;
         }else{
             [MJAppearanceManager sharedInstance].currentInterfaceStyle = MJUserInterfaceStyleDark;
@@ -48,7 +52,7 @@ NSString * const MJAppearanceManagerUserInterfaceStyleKey = @"MJAppearanceManage
     }
 }
 
-- (MJUserInterfaceStyle)localMode {
+- (MJUserInterfaceStyle)localUserInterfaceStyle {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSNumber *interfaceStyle =  [userDefaults valueForKey:MJAppearanceManagerUserInterfaceStyleKey];
     if(interfaceStyle == nil){
@@ -57,7 +61,7 @@ NSString * const MJAppearanceManagerUserInterfaceStyleKey = @"MJAppearanceManage
     return (MJUserInterfaceStyle)[interfaceStyle intValue];
 }
 
-- (void)saveMode:(MJUserInterfaceStyle)mode {
+- (void)saveUserInterfaceStyle:(MJUserInterfaceStyle)mode {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:@(mode) forKey:MJAppearanceManagerUserInterfaceStyleKey];
 }
@@ -67,7 +71,7 @@ NSString * const MJAppearanceManagerUserInterfaceStyleKey = @"MJAppearanceManage
         return;
     }
     _currentInterfaceStyle = currentInterfaceStyle;
-    [self saveMode:currentInterfaceStyle];
+    [self saveUserInterfaceStyle:currentInterfaceStyle];
     switch (currentInterfaceStyle) {
         case MJUserInterfaceStyleLight:{
             [[NSNotificationCenter defaultCenter] postNotificationName:KAppMJAppearanceChangeNotifcation object:nil];

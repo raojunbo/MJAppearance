@@ -19,8 +19,9 @@
         return;
     }
     self.tintColor = mj_tintColor;
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        self.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];
+        weakSelf.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];;
 }
@@ -34,8 +35,9 @@
         return;
     }
     self.barTintColor = mj_barTintColor;
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        self.barTintColor = [MJColor mj_appearanceColorWithName:mj_barTintColor.colorName];;
+        weakSelf.barTintColor = [MJColor mj_appearanceColorWithName:mj_barTintColor.colorName];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];;
 }

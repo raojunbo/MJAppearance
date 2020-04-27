@@ -35,8 +35,9 @@
         return;
     }
     self.backgroundColor = mj_backgroundColor;
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        self.backgroundColor = [MJColor mj_appearanceColorWithName:mj_backgroundColor.colorName];
+        weakSelf.backgroundColor = [MJColor mj_appearanceColorWithName:mj_backgroundColor.colorName];
     };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }

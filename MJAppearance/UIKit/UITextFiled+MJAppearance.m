@@ -19,8 +19,9 @@
         return;
     }
     self.textColor = mj_textColor;
+    __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        self.textColor = [MJColor mj_appearanceColorWithName:mj_textColor.colorName];
+        weakSelf.textColor = [MJColor mj_appearanceColorWithName:mj_textColor.colorName];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
