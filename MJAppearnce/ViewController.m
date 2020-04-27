@@ -70,7 +70,7 @@
 - (void)testBindColorToView {
     //普通view
     self.normaleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
-    self.normaleView.mj_backgroundColor = MJColor.Mojiblue
+    self.normaleView.mj_backgroundColor = MJColor.Mojiblue;
 //    .alphaPicker(0.1,0.4);
 
     //     MJColor.Mojiblue;
