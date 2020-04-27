@@ -24,7 +24,7 @@
     
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.separatorColor = [MJColor mj_appearanceColorWithName:mj_separatorColor.colorName];;
+        weakSelf.separatorColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_separatorColor];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -39,7 +39,7 @@
     __weak typeof(self) weakSelf = self;
     
     MJBlockPicker colorPicker = ^(){
-        weakSelf.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexColor.colorName];;
+        weakSelf.separatorColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_sectionIndexColor];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -52,7 +52,7 @@
     __weak typeof(self) weakSelf = self;
     
     MJBlockPicker colorPicker = ^(){
-        weakSelf.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexBackgroundColor.colorName];;
+        weakSelf.separatorColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_sectionIndexBackgroundColor];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -65,7 +65,7 @@
     __weak typeof(self) weakSelf = self;
     
     MJBlockPicker colorPicker = ^(){
-        weakSelf.separatorColor = [MJColor mj_appearanceColorWithName:mj_sectionIndexTrackingBackgroundColor.colorName];;
+        weakSelf.separatorColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_sectionIndexTrackingBackgroundColor];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

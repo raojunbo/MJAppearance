@@ -31,10 +31,10 @@ NSString * const MJAppearanceManagerUserInterfaceStyleKey = @"MJAppearanceManage
     if (self  = [super init]) {
         _currentInterfaceStyle = [self localUserInterfaceStyle];
         //通知目的：iOS13及iOS13以下的图片的更新在进入前台时，都需要根据当前样式更新图片。
-         if (@available(iOS 13.0, *)) {
+        if (@available(iOS 13.0, *)) {
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(systemInterfaceStyleChange) name:UIApplicationDidBecomeActiveNotification object:nil];
-         }
-     
+        }
+        
     }
     return self;
 }

@@ -24,7 +24,7 @@
     self.tintColor = mj_tintColor;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];
+        weakSelf.tintColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_tintColor];
     };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
@@ -37,7 +37,7 @@
     [self setTitleColor:color forState:state];
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        UIColor *newColor = [MJColor mj_appearanceColorWithName:color.colorName];
+        UIColor *newColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:color];
         [weakSelf mj_setTitleColor:newColor forState:state];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];

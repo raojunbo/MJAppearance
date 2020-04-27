@@ -6,7 +6,7 @@ target 'MJAppearnce' do
   #use_frameworks!
 
   # Pods for MJAppearnce
-    pod 'SDWebImage', '5.4.2'
+  pod 'SDWebImage', '5.4.2'
   target 'MJAppearnceUITests' do
     # Pods for testing
   end

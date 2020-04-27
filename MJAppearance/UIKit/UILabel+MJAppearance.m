@@ -21,7 +21,7 @@
     self.textColor = mj_textColor;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.textColor = [MJColor mj_appearanceColorWithName:mj_textColor.colorName];
+        weakSelf.textColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_textColor];
     };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
@@ -38,7 +38,7 @@
     
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.shadowColor = [MJColor mj_appearanceColorWithName:mj_shadowColor.colorName];
+        weakSelf.shadowColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_shadowColor];
     };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }
@@ -54,7 +54,7 @@
     self.highlightedTextColor = mj_highlightedTextColor;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.highlightedTextColor = [MJColor mj_appearanceColorWithName:mj_highlightedTextColor.colorName];
+        weakSelf.highlightedTextColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_highlightedTextColor];
     };
     [self.appearanceWorks setValue:colorPicker forKey:NSStringFromSelector(_cmd)];
 }

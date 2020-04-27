@@ -31,6 +31,9 @@
 		ED7B95862455BF9A0005A744 /* UIButton+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B95722455BF9A0005A744 /* UIButton+MJAppearance.m */; };
 		ED7B95872455BF9A0005A744 /* UISwitch+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B95732455BF9A0005A744 /* UISwitch+MJAppearance.m */; };
 		ED7B95882455BF9A0005A744 /* UISearchBar+MJAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B95742455BF9A0005A744 /* UISearchBar+MJAppearance.m */; };
+		ED7B95D42456E98D0005A744 /* MJMainTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B95D32456E98D0005A744 /* MJMainTheme.m */; };
+		ED7B95D72456E9A20005A744 /* MJAQITheme.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B95D62456E9A20005A744 /* MJAQITheme.m */; };
+		ED7B95DA2456FE900005A744 /* MJBaseTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B95D92456FE900005A744 /* MJBaseTheme.m */; };
 		EDE2EC68244953C100C4BEAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC67244953C100C4BEAB /* AppDelegate.m */; };
 		EDE2EC6E244953C100C4BEAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2EC6D244953C100C4BEAB /* ViewController.m */; };
 		EDE2EC73244953C200C4BEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE2EC72244953C200C4BEAB /* Assets.xcassets */; };
@@ -98,6 +101,12 @@
 		ED7B95732455BF9A0005A744 /* UISwitch+MJAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+MJAppearance.m"; sourceTree = "<group>"; };
 		ED7B95742455BF9A0005A744 /* UISearchBar+MJAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+MJAppearance.m"; sourceTree = "<group>"; };
 		ED7B95752455BF9A0005A744 /* MJAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAppearance.h; sourceTree = "<group>"; };
+		ED7B95D22456E98D0005A744 /* MJMainTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJMainTheme.h; sourceTree = "<group>"; };
+		ED7B95D32456E98D0005A744 /* MJMainTheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJMainTheme.m; sourceTree = "<group>"; };
+		ED7B95D52456E9A20005A744 /* MJAQITheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJAQITheme.h; sourceTree = "<group>"; };
+		ED7B95D62456E9A20005A744 /* MJAQITheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJAQITheme.m; sourceTree = "<group>"; };
+		ED7B95D82456FE900005A744 /* MJBaseTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJBaseTheme.h; sourceTree = "<group>"; };
+		ED7B95D92456FE900005A744 /* MJBaseTheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJBaseTheme.m; sourceTree = "<group>"; };
 		EDE2EC63244953C100C4BEAB /* MJAppearnce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJAppearnce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE2EC66244953C100C4BEAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDE2EC67244953C100C4BEAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +163,7 @@
 		ED7B954C2455BF990005A744 /* MJAppearance */ = {
 			isa = PBXGroup;
 			children = (
+				ED7B95DB2456FEC00005A744 /* Theme */,
 				ED7B954D2455BF990005A744 /* Core */,
 				ED7B955A2455BF990005A744 /* UIKit */,
 				ED7B95752455BF9A0005A744 /* MJAppearance.h */,
@@ -211,6 +221,19 @@
 				ED7B95742455BF9A0005A744 /* UISearchBar+MJAppearance.m */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		ED7B95DB2456FEC00005A744 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B95D82456FE900005A744 /* MJBaseTheme.h */,
+				ED7B95D92456FE900005A744 /* MJBaseTheme.m */,
+				ED7B95D22456E98D0005A744 /* MJMainTheme.h */,
+				ED7B95D32456E98D0005A744 /* MJMainTheme.m */,
+				ED7B95D52456E9A20005A744 /* MJAQITheme.h */,
+				ED7B95D62456E9A20005A744 /* MJAQITheme.m */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		EDE2EC5A244953C100C4BEAB = {
@@ -416,6 +439,7 @@
 				ED7B957A2455BF9A0005A744 /* NSObject+MJAppearance.m in Sources */,
 				ED7B95762455BF9A0005A744 /* UIImage+MJAppearance.m in Sources */,
 				EDE2EC6E244953C100C4BEAB /* ViewController.m in Sources */,
+				ED7B95D72456E9A20005A744 /* MJAQITheme.m in Sources */,
 				ED7B957B2455BF9A0005A744 /* UIColor+MJAppearance.m in Sources */,
 				ED7B95782455BF9A0005A744 /* MJAppearanceColor.m in Sources */,
 				ED7B95852455BF9A0005A744 /* UIImageView+MJAppearance.m in Sources */,
@@ -433,6 +457,8 @@
 				ED7B957F2455BF9A0005A744 /* UITextFiled+MJAppearance.m in Sources */,
 				ED7B957C2455BF9A0005A744 /* UINavigationBar+MJAppearance.m in Sources */,
 				ED7B95862455BF9A0005A744 /* UIButton+MJAppearance.m in Sources */,
+				ED7B95D42456E98D0005A744 /* MJMainTheme.m in Sources */,
+				ED7B95DA2456FE900005A744 /* MJBaseTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

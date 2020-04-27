@@ -58,6 +58,14 @@
     objc_setAssociatedObject(self, @selector(setAlphaPicker:), [alphaPicker copy], OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
+- (void)setThemeName:(NSString *)themeName {
+    objc_setAssociatedObject(self, @selector(setThemeName:), themeName, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)themeName {
+    return  objc_getAssociatedObject(self, @selector(setThemeName:));
+}
+
 - (MJColorAlphaPicker)alphaPicker {
     return objc_getAssociatedObject(self, @selector(setAlphaPicker:));
 }

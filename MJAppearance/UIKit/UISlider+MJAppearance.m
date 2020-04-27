@@ -22,7 +22,7 @@
     self.minimumTrackTintColor = mj_minimumTrackTintColor;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.minimumTrackTintColor = [MJColor mj_appearanceColorWithName:mj_minimumTrackTintColor.colorName];
+        weakSelf.minimumTrackTintColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_minimumTrackTintColor];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -34,7 +34,7 @@
     self.maximumTrackTintColor = mj_maximumTrackTintColor;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.maximumTrackTintColor = [MJColor mj_appearanceColorWithName:mj_maximumTrackTintColor.colorName];
+        weakSelf.maximumTrackTintColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_maximumTrackTintColor];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -46,7 +46,7 @@
     self.thumbTintColor = mj_thumbTintColor;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.thumbTintColor = [MJColor mj_appearanceColorWithName:mj_thumbTintColor.colorName];
+        weakSelf.thumbTintColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_thumbTintColor];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

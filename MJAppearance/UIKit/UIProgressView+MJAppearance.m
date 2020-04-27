@@ -22,7 +22,7 @@
     self.mj_trackTintColorPicker = mj_trackTintColorPicker;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.tintColor = [MJColor mj_appearanceColorWithName:mj_trackTintColorPicker.colorName];
+        weakSelf.tintColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_trackTintColorPicker];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
@@ -34,7 +34,7 @@
     self.mj_progressTintColorPicker = mj_progressTintColorPicker;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.tintColor = [MJColor mj_appearanceColorWithName:mj_progressTintColorPicker.colorName];
+        weakSelf.tintColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_progressTintColorPicker];
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }

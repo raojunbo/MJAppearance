@@ -57,9 +57,9 @@
     self.tipLabel.left = self.switchView.right + 10;
     
     [self testBindColorToView];
-    [self testBindLabel];
-    [self testBindButton];
-    [self testBindImageView];
+//    [self testBindLabel];
+//    [self testBindButton];
+//    [self testBindImageView];
 }
 
 - (void)toSecondButtonButtonClick {
@@ -70,8 +70,8 @@
 - (void)testBindColorToView {
     //普通view
     self.normaleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
-    UIColor * mojiblue =  MJColor.Mojiblue;
-    self.normaleView.mj_backgroundColor = mojiblue;
+    
+    self.normaleView.mj_backgroundColor =  MJColor.mainTheme.Mojiblue;
     
     [self.view addSubview:self.normaleView];
     self.normaleView.top = self.switchView.bottom;
@@ -82,8 +82,8 @@
     self.label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
     self.label.text = @"我是文本";
     
-    UIColor *mojibluealpha =  MJColor.Mojiblue.alphaPicker(0.1,0.5);
-    self.label.mj_backgroundColor = mojibluealpha;
+//    UIColor *mojibluealpha =  MJColor.Mojiblue.alphaPicker(0.1,0.5);
+//    self.label.mj_backgroundColor = mojibluealpha;
     [self.view addSubview:self.label];
     self.label.top = self.normaleView.bottom;
 }
@@ -93,8 +93,8 @@
     self.button = [UIButton buttonWithType:UIButtonTypeCustom];
     self.button.frame = CGRectMake(0, 0, 50, 50);
     [self.button setTitle:@"我是button" forState:UIControlStateNormal];
-    [self.button mj_setTitleColor:MJColor.Mojiblue forState:UIControlStateNormal];
-    self.button.mj_backgroundColor = MJColor.page.alphaPicker(0.1,0.5);
+//    [self.button mj_setTitleColor:MJColor.Mojiblue forState:UIControlStateNormal];
+//    self.button.mj_backgroundColor = MJColor.page.alphaPicker(0.1,0.5);
     [self.view addSubview:self.button];
     self.button.top = self.label.bottom;
     
@@ -118,14 +118,14 @@
 - (void)testBindImageView {
     //image
     self.imageView2 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50 )];
-    self.imageView2.mj_backgroundColor = MJColor.page;
+//    self.imageView2.mj_backgroundColor = MJColor.page;
     self.imageView2.mj_image = [MJAppearanceImage mj_imageWithName:@"cry"];
     [self.view addSubview:self.imageView2];
     self.imageView2.top = self.button.bottom;
     
     //从assets读取
     self.imageView3 = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50 )];
-    self.imageView3.mj_backgroundColor = MJColor.page;
+//    self.imageView3.mj_backgroundColor = MJColor.page;
     self.imageView3.mj_image = [MJAppearanceImage mj_imageWithName:@"cry"];
     [self.view addSubview:self.imageView3];
     self.imageView3.top = self.imageView2.top;
@@ -159,6 +159,7 @@
     self.imageView6.top = self.imageView2.top;
     self.imageView6.left = self.imageView5.right + 10;
     self.imageView6.mj_netImageSupportDark = YES;
+    
 }
 
 - (void)switchTheme {

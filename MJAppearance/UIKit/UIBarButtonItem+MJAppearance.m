@@ -20,7 +20,7 @@
     self.tintColor = mj_tintColor;
     __weak typeof(self) weakSelf = self;
     MJBlockPicker colorPicker = ^(){
-        weakSelf.tintColor = [MJColor mj_appearanceColorWithName:mj_tintColor.colorName];;
+        weakSelf.tintColor = [MJAppearanceColor mj_appearanceColorWithOriginColor:mj_tintColor];;
     };
     [self.appearanceWorks setValue:[colorPicker copy] forKey:NSStringFromSelector(_cmd)];
 }
